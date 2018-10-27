@@ -23,6 +23,14 @@ new Vue({
         style: 'multi'
       }
     });
+
+    const contrast = $(`<a href="different-contrast.html" class="btn btn-primary">对比</a>`);
+    contrast.insertAfter('.dataTables_info .select-info');
+
+    datatable.on('select.dt deselect.dt',  () => {
+      contrast.remove();
+      contrast.insertAfter('.dataTables_info .select-info');
+    });
   }
 });
 
