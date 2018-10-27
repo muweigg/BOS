@@ -1,0 +1,128 @@
+{% extends "./common/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid same-contrast">
+
+  <!-- Page-Title -->
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">组织机构代码：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">0145863654615454</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">规模：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">大型</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">（开业）成立时间：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-6 col-form-label">2015-12-12</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">类型：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">有限责任公式</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">登记注册类型：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">国有</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">存续状态：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">营业</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">住所：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">重庆市渝北区双鱼座</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-6 col-sm-6 col-md-4 col-form-label">是否台商投资：</label>
+        <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-form-label">否</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-12">
+      <form>
+        <div class="form-row">
+            <div class="form-group">
+              <label class="col-form-label">时长选择：</label>
+            </div>
+          <div class="form-group">
+            <select class="form-control">
+              <option value="6">近6月</option>
+              <option value="12">近1年</option>
+            </select>
+          </div>
+          <div class="form-group m-l-15">
+            <button class="btn btn-primary">查询</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+
+      <div class="card-box table-responsive">
+
+        <table id="responsive-datatable" class="table table-bordered table-bordered dt-responsive nowrap" cellspacing="0"
+          width="100%">
+          <thead>
+            <tr>
+              <th data-priority="1">指标</th>
+              <th data-priority="1">2018年1季度</th>
+              <th data-priority="2">2017年4季度</th>
+              <th data-priority="3">2017年3季度</th>
+              <th data-priority="4">2017年2季度</th>
+              <th data-priority="5">2017年1季度</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="i in 35">
+              <th><span class="co-name">商业营业用房施工面积{{ i }}（万平方米）</span></th>
+              <td>{{ 1000 + i }}</td>
+              <td>{{ 1000 + i }}</td>
+              <td>{{ 1000 + i }}</td>
+              <td>{{ 1000 + i }}</td>
+              <td>{{ 1000 + i }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- container -->
+{% endblock %}
