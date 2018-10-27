@@ -1,4 +1,4 @@
-import 'script-loader!./third-party/ubold/modernizr.min.js';
+// import 'script-loader!./third-party/ubold/modernizr.min.js';
 
 import 'script-loader!./third-party/ubold/jquery.min';
 import 'script-loader!./third-party/ubold/popper.min';

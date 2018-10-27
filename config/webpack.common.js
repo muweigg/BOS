@@ -146,6 +146,9 @@ module.exports = function (options) {
             new ForkTsCheckerWebpackPlugin({ vue: true, tslint: false }),
             ...fileUtils.getHTMLPlugin(),
             ...spritesmithConfig,
+            new CopyPlugin([{
+                from: helpers.root('src/js/common/third-party/ubold/modernizr.min.js'),
+                to: 'assets/js/common/ubold/' }]),
             // new BundleAnalyzerPlugin(),
         ]
     }
