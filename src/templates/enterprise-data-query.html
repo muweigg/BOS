@@ -1,0 +1,69 @@
+{% extends "./common/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid enterprise-data-query">
+
+  <!-- Page-Title -->
+  <div class="row">
+
+    <div class="col-sm-12">
+
+      <form class="pull-right">
+        <div class="form-row">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="1">近1月</option>
+              <option value="3">近3月</option>
+              <option value="6">近半年</option>
+            </select>
+          </div>
+          <div class="form-group m-l-15">
+            <button class="btn btn-primary">查询</button>
+          </div>
+        </div>
+      </form>
+
+      <h4 class="page-title">企业数据查询</h4>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+
+      <div class="card-box table-responsive">
+
+        <table id="responsive-datatable" class="table table-bordered table-bordered dt-responsive nowrap" cellspacing="0"
+          width="100%">
+          <thead>
+            <tr>
+              <th data-priority="1">序号</th>
+              <th data-priority="1">行业分类</th>
+              <th data-priority="2">规模以上企业数</th>
+              <th data-priority="3">规模以上企业生产总值（亿元）</th>
+              <th data-priority="3">规模以上企业营业收入（亿元）</th>
+              <th data-priority="3">规模以上企业税收（亿元）</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="i in 35">
+              <th><span class="co-name">{{ i }}</span></th>
+              <td><a href="industry-data-query.html">行业分类 {{ i }}</a></td>
+              <td>{{ 1000 - i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- container -->
+{% endblock %}

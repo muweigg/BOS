@@ -1,0 +1,29 @@
+// UBold
+@import './third-party/ubold/morris/morris.css';
+
+@import './third-party/ubold/datatables/dataTables.bootstrap4.min.css';
+@import './third-party/ubold/datatables/buttons.bootstrap4.min.css';
+@import './third-party/ubold/datatables/responsive.bootstrap4.min.css';
+@import './third-party/ubold/datatables/select.bootstrap4.min.css';
+
+@import './third-party/ubold/bootstrap.min.css';
+@import './third-party/ubold/icons.css';
+@import './third-party/ubold/style.css';
+
+@import './third-party/mui-flexbox/mui-flexbox';
+@import './_/icons';
+
+i.icon {
+    display: inline-block;
+}
+
+@each $icon in $spritesheet-sprites {
+    $icon-name: nth($icon, 10);
+    .icon-#{$icon-name} {
+        @include sprite($icon);
+    }
+}
+
+[v-cloak], [hidden], .hidden {
+    display: none;
+}

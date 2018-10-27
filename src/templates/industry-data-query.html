@@ -1,0 +1,159 @@
+{% extends "./common/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid industry-data-query">
+
+  <!-- Page-Title -->
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-11">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-primary waves-effect waves-light dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">组织机构代码</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">组织机构代码</a>
+                <a class="dropdown-item" href="#">企业详细名称</a>
+              </div>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-sm-12 col-md-3 col-form-label">行业代码：</label>
+        <div class="col-sm-12 col-md-9 col-lg-8">
+          <input type="text" class="form-control">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-sm-12 col-md-3 col-form-label">单位规模：</label>
+        <div class="col-sm-12 col-md-8 col-lg-9">
+          <select name="" id="" class="form-control">
+            <option value="0">全部</option>
+            <option value="1">大型</option>
+            <option value="2">中型</option>
+            <option value="3">小型</option>
+            <option value="4">微型</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-sm-12 col-md-3 col-form-label">登记注册类型：</label>
+        <div class="col-sm-6 col-md-4">
+          <select name="" id="" class="form-control">
+            <option value="0">全部</option>
+            <option value="1">内资</option>
+            <option value="2">港澳台商投资</option>
+            <option value="3">外商投资</option>
+          </select>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-4">
+          <select name="" id="" class="form-control">
+            <option value="0">全部</option>
+            <option value="1">310.中外合资经营</option>
+            <option value="2">320.中外合作经营</option>
+            <option value="3">330.外资企业</option>
+            <option value="4">340.外商投资股份有限公司</option>
+            <option value="5">390.其他外商投资</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <label class="col-sm-12 col-md-3 col-form-label">时长选择：</label>
+        <div class="col-sm-6 col-md-4">
+          <select name="" id="" class="form-control">
+              <option value="0">月度数据</option>
+              <option value="1">季度数据</option>
+              <option value="2">年度数据</option>
+          </select>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <select name="" id="" class="form-control">
+            <option value="0">2018第三季度</option>
+            <option value="1">2018第二季度</option>
+            <option value="2">2018第一季度</option>
+            <option value="3">2017第四季度</option>
+            <option value="4">2017第三季度</option>
+            <option value="5">自定义</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="form-group row">
+        <div class="col-12 text-right">
+          <button class="btn btn-primary">查询</button>
+          <button class="btn btn-primary">重置</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+
+      <div class="card-box table-responsive">
+
+        <table id="responsive-datatable" class="table table-bordered table-bordered dt-responsive nowrap" cellspacing="0"
+          width="100%">
+          <thead>
+            <tr>
+              <th data-priority="1">序号</th>
+              <th data-priority="1">组织机构代码</th>
+              <th data-priority="2">企业名称</th>
+              <th data-priority="3">商业营业用房施工面积<br>（万平方米）</th>
+              <th data-priority="3">商业营业用房竣工面积<br>（万平方米）</th>
+              <th data-priority="3">商业营业用房销售面积<br>（万平方米）</th>
+              <th data-priority="3">商业营业用房销售额<br>（亿元）</th>
+              <th data-priority="3">住宅用房施工面积<br>（万平方米）</th>
+              <th data-priority="3">住宅用房竣工面积<br>（万平方米）</th>
+              <th data-priority="3">住宅用房销售面积<br>（万平方米）</th>
+              <th data-priority="3">住宅营业用房销售额<br>（亿元）</th>
+              <th data-priority="1">操作</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="i in 35">
+              <th><span class="co-name">{{ i }}</span></th>
+              <td>{{ 1000 + i }}</td>
+              <td>企业名称 {{ i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td>{{ 1 * i }}</td>
+              <td><a href="#">+对比</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- container -->
+{% endblock %}
