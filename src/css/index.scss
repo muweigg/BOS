@@ -72,11 +72,10 @@ ul {
   .bottom {
     display: flex;
     align-items: center;
-    width: 100%;
     height: 60px;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 5px;
+    right: 5px;
     bottom: 0;
     background-color: rgba(#000, .2);
     border: 1px solid #6ED0FD;
@@ -87,7 +86,7 @@ ul {
     max-width: 500px;
     position: relative;
     z-index: 0;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     background-color: rgba(#000, .2);
     flex: 1 1 auto;
     display: flex;
@@ -95,6 +94,7 @@ ul {
 
     > div {
       border: 1px solid #6ED0FD;
+      margin: 3px 0;
     }
 
     h5 {
@@ -114,7 +114,7 @@ ul {
   }
 
   .left-data-area {
-    margin-left: -15px;
+    margin-left: -10px;
     
     > div {
       flex: 1 1 50%;
@@ -198,10 +198,64 @@ ul {
   }
 
   .right-data-area {
-    margin-right: -15px;
+    margin-right: -10px;
     
     > div {
       flex: 1 1 33.333337%;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    .r-t-1 {
+
+      .pie-chart {
+        flex: 1 1 auto;
+        margin-top: 10px;
+      }
+    }
+
+    .r-t-2 {
+
+      .radar-chart {
+        flex: 1 1 auto;
+        margin-top: 10px;
+      }
+    }
+
+    .r-t-3 {
+
+      .list-wrap {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+
+        th, td {
+          text-align: center;
+        }
+
+        th {
+          padding: 10px 10px;
+          color: #AEAEAE;
+          font-weight: normal;
+        }
+
+        td {
+          padding: 8px 10px;
+        }
+
+        .ion-arrow-up-a {
+          color: #00cc00;
+        }
+
+        .ion-arrow-down-a {
+          color: #ff0000;
+        }
+      }
     }
   }
 }
