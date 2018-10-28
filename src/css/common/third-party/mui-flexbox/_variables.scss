@@ -1,14 +1,14 @@
 $columns: 5 12 !default;
 $prefix: 'col-' !default;
-$class-selector: true !default;
-$attribute-selector: false !default;
+$class-selector: false !default;
+$attribute-selector: true !default;
 $column-offset: true !default;
 $justify: false !default;
 // Please refer to https://docs.emmet.io/cheat-sheet/
 $emmet-align: true !default;
 $emmet-float: false !default;
 $emmet-cursor: false !default;
-$emmet-display: false !default;
+$emmet-display: true !default;
 $emmet-overflow: false !default;
 $emmet-position: false !default;
 $emmet-visibility: false !default;

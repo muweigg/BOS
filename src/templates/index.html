@@ -1,7 +1,26 @@
-{% extends "./common/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-    <main>
-        <h1>Index</h1>
-    </main>
-{% endblock %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <title>
+    Command Centre
+  </title>
+  <script>
+    window.resizefunc = [];
+  </script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=pwb6K1HGm6jmTQipCdNgmq8cGUnLdLfp"></script>
+</head>
+
+<body d-f fxd-c fx-auto>
+
+  <div class="container-fluid index" d-f fx-g>
+    <div id="bmap"></div>
+    <h4 class="title"><img src="../assets/images/logo.png" alt="">渝北区数据指挥中心平台</h4>
+  </div>
+
+</body>
+
+</html>
