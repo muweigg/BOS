@@ -20,216 +20,247 @@
     <div id="bmap"></div>
     <h4 class="title"><img src="../assets/images/logo.png" alt="">渝北区数据指挥中心平台</h4>
 
-      <div class="left-data-area">
-        <div class="l-t-1">
-          <h5>
-            指标轮询
-            <span class="pos-center fz16 c2">财政收入总值（亿元）</span>
-            <i class="fa fa-sort-amount-desc fz16 c2"></i>
-          </h5>
-          <div class="text-center">（2018-01——2018-08）</div>
-          <div class="list-wrap">
-            <ul>
-              <li>
-                <div class="num">1</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 100%;"></div>
-                </div>
-                <div class="count">1414.44</div>
-              </li>
-              <li>
-                <div class="num">2</div>
-                <div class="region">创新经济走廊</div>
-                <div class="c-progress">
-                  <div style="width: 90%;"></div>
-                </div>
-                <div class="count">900.44</div>
-              </li>
-              <li>
-                <div class="num">3</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 80%;"></div>
-                </div>
-                <div class="count">800.44</div>
-              </li>
-              <li>
-                <div class="num">4</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 70%;"></div>
-                </div>
-                <div class="count">700.44</div>
-              </li>
-              <li>
-                <div class="num">5</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 60%;"></div>
-                </div>
-                <div class="count">600.44</div>
-              </li>
-              <li>
-                <div class="num">6</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 50%;"></div>
-                </div>
-                <div class="count">500.44</div>
-              </li>
-              <li>
-                <div class="num">7</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 40%;"></div>
-                </div>
-                <div class="count">400.44</div>
-              </li>
-              <li>
-                <div class="num">8</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 30%;"></div>
-                </div>
-                <div class="count">300.44</div>
-              </li>
-              <li>
-                <div class="num">9</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 20%;"></div>
-                </div>
-                <div class="count">200.44</div>
-              </li>
-              <li>
-                <div class="num">10</div>
-                <div class="region">两江新区</div>
-                <div class="c-progress">
-                  <div style="width: 10%;"></div>
-                </div>
-                <div class="count">100.44</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="l-t-2">
-          <h5>经济指标曲线 <span class="pull-right">亿元</span></h5>
-          <div class="line-chart"></div>
-        </div>
-
-        <div class="tools">
-          <!-- 系统时间 -->
-          <div class="system-time">
-            系统时间：{{ systemTime }}
-          </div>
-
-          <!-- 行业分布 -->
-          <div class="distribution">
-            行业分布
-            <ul>
-              <li>农、林、牧、渔业</li>
-              <li>采矿业</li>
-              <li>制造业</li>
-              <li>住宿和餐饮业</li>
-              <li>金融业</li>
-              <li>房地产业</li>
-              <li>租赁和商务服务</li>
-              <li>...</li>
-            </ul>
-          </div>
+    <div class="left-data-area">
+      <div class="l-t-1">
+        <h5>
+          指标轮询
+          <span class="pos-center fz16 c2">财政收入总值（亿元）</span>
+          <i class="fa fa-sort-amount-desc fz16 c2"></i>
+        </h5>
+        <div class="text-center">（2018-01——2018-08）</div>
+        <div class="list-wrap">
+          <ul>
+            <li>
+              <div class="num">1</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 100%;"></div>
+              </div>
+              <div class="count">1414.44</div>
+            </li>
+            <li>
+              <div class="num">2</div>
+              <div class="region">创新经济走廊</div>
+              <div class="c-progress">
+                <div style="width: 90%;"></div>
+              </div>
+              <div class="count">900.44</div>
+            </li>
+            <li>
+              <div class="num">3</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 80%;"></div>
+              </div>
+              <div class="count">800.44</div>
+            </li>
+            <li>
+              <div class="num">4</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 70%;"></div>
+              </div>
+              <div class="count">700.44</div>
+            </li>
+            <li>
+              <div class="num">5</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 60%;"></div>
+              </div>
+              <div class="count">600.44</div>
+            </li>
+            <li>
+              <div class="num">6</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 50%;"></div>
+              </div>
+              <div class="count">500.44</div>
+            </li>
+            <li>
+              <div class="num">7</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 40%;"></div>
+              </div>
+              <div class="count">400.44</div>
+            </li>
+            <li>
+              <div class="num">8</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 30%;"></div>
+              </div>
+              <div class="count">300.44</div>
+            </li>
+            <li>
+              <div class="num">9</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 20%;"></div>
+              </div>
+              <div class="count">200.44</div>
+            </li>
+            <li>
+              <div class="num">10</div>
+              <div class="region">两江新区</div>
+              <div class="c-progress">
+                <div style="width: 10%;"></div>
+              </div>
+              <div class="count">100.44</div>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="right-data-area">
-        <div class="r-t-1">
-          <h5>行业分类：木耳物流园</h5>
-          <div class="pie-chart"></div>
+      <div class="l-t-2">
+        <h5>经济指标曲线 <span class="pull-right">亿元</span></h5>
+        <div class="line-chart"></div>
+      </div>
+
+      <div class="tools">
+        <!-- 系统时间 -->
+        <div class="system-time">
+          系统时间：{{ systemTime }}
         </div>
 
-        <div class="r-t-2">
-          <h5>指标雷达：木耳物流园VS两江新区</h5>
-          <div class="radar-chart"></div>
+        <!-- 行业分布 -->
+        <div class="distribution">
+          行业分布
+          <ul>
+            <li data-toggle="modal" data-target=".distribution-box">农、林、牧、渔业</li>
+            <li data-toggle="modal" data-target=".distribution-box">采矿业</li>
+            <li data-toggle="modal" data-target=".distribution-box">制造业</li>
+            <li data-toggle="modal" data-target=".distribution-box">住宿和餐饮业</li>
+            <li data-toggle="modal" data-target=".distribution-box">金融业</li>
+            <li data-toggle="modal" data-target=".distribution-box">房地产业</li>
+            <li data-toggle="modal" data-target=".distribution-box">租赁和商务服务</li>
+            <li>...</li>
+          </ul>
         </div>
+      </div>
+    </div>
 
-        <div class="r-t-3">
-          <h5>核心指标增长</h5>
-          <div class="list-wrap">
-            <table>
-              <thead>
-                <th>指标名称</th>
-                <th>指标月（18/10）</th>
-                <th>同比增长</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>工业生产总值</td>
-                  <td>1643.45 亿</td>
-                  <td><i class="ion-arrow-up-a fz20"></i> 14.54%</td>
-                </tr>
-                <tr>
-                  <td>固定投资总值</td>
-                  <td>589.35 亿</td>
-                  <td><i class="ion-arrow-up-a fz20"></i> 12.24%</td>
-                </tr>
-                <tr>
-                  <td>财务收入总值</td>
-                  <td>283.21 亿</td>
-                  <td><i class="ion-arrow-down-a fz20"></i> 5.67%</td>
-                </tr>
-                <tr>
-                  <td>居民消费支出总值</td>
-                  <td>756.32 亿</td>
-                  <td><i class="ion-arrow-down-a fz20"></i> 2.43%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="right-data-area">
+      <div class="r-t-1">
+        <h5>行业分类：木耳物流园</h5>
+        <div class="pie-chart"></div>
+      </div>
+
+      <div class="r-t-2">
+        <h5>指标雷达：木耳物流园VS两江新区</h5>
+        <div class="radar-chart"></div>
+      </div>
+
+      <div class="r-t-3">
+        <h5>核心指标增长</h5>
+        <div class="list-wrap">
+          <table>
+            <thead>
+              <th>指标名称</th>
+              <th>指标月（18/10）</th>
+              <th>同比增长</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>工业生产总值</td>
+                <td>1643.45 亿</td>
+                <td><i class="ion-arrow-up-a fz20"></i> 14.54%</td>
+              </tr>
+              <tr>
+                <td>固定投资总值</td>
+                <td>589.35 亿</td>
+                <td><i class="ion-arrow-up-a fz20"></i> 12.24%</td>
+              </tr>
+              <tr>
+                <td>财务收入总值</td>
+                <td>283.21 亿</td>
+                <td><i class="ion-arrow-down-a fz20"></i> 5.67%</td>
+              </tr>
+              <tr>
+                <td>居民消费支出总值</td>
+                <td>756.32 亿</td>
+                <td><i class="ion-arrow-down-a fz20"></i> 2.43%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
 
-        <div class="tools">
-          <!-- 天气 -->
-          <div class="weather">
-            <img src="../assets/images/temp/weather.png" width="30" alt="">
-            多云，17&#8451;/25&#8451;
-            <div class="weather-detail">
-              <div>东南风，4级</div>
-              <div>PM 2.5 22pg/m&sup2;</div>
-              <div>空气质量优</div>
-              <div d-f>
-                <div ta-c fx-auto>
-                  <div>明天</div>
-                  <div>17&#8451;-25&#8451;</div>
-                  <img src="../assets/images/temp/weather.png" width="30" alt="">
-                </div>
-                <div ta-c fx-auto>
-                  <div>后天</div>
-                  <div>17&#8451;/25&#8451;</div>
-                  <img src="../assets/images/temp/weather.png" width="30" alt="">
-                </div>
+      <div class="tools">
+        <!-- 天气 -->
+        <div class="weather">
+          <img src="../assets/images/temp/weather.png" width="30" alt="">
+          多云，17&#8451;/25&#8451;
+          <div class="weather-detail">
+            <div>东南风，4级</div>
+            <div>PM 2.5 22pg/m&sup2;</div>
+            <div>空气质量优</div>
+            <div d-f>
+              <div ta-c fx-auto>
+                <div>明天</div>
+                <div>17&#8451;-25&#8451;</div>
+                <img src="../assets/images/temp/weather.png" width="30" alt="">
+              </div>
+              <div ta-c fx-auto>
+                <div>后天</div>
+                <div>17&#8451;/25&#8451;</div>
+                <img src="../assets/images/temp/weather.png" width="30" alt="">
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- 指标分布 -->
-          <div class="distribution">
-            指标分布
-            <ul>
-              <li>国内生产总值</li>
-              <li>固定投资总额</li>
-              <li>财政收入</li>
-              <li>贷款总额</li>
-              <li>...</li>
-            </ul>
+        <!-- 指标分布 -->
+        <div class="distribution">
+          指标分布
+          <ul>
+            <li data-toggle="modal" data-target=".distribution-box-2">国内生产总值</li>
+            <li data-toggle="modal" data-target=".distribution-box-2">固定投资总额</li>
+            <li data-toggle="modal" data-target=".distribution-box-2">财政收入</li>
+            <li data-toggle="modal" data-target=".distribution-box-2">贷款总额</li>
+            <li>...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      111
+    </div>
+
+    <div class="modal fade distribution-box" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+      aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myLargeModalLabel">Box 1</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            ...
           </div>
         </div>
       </div>
-
-      <div class="bottom">
-        111
-      </div>
+    </div>
   </div>
+
+  <div class="modal fade distribution-box-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myLargeModalLabel">Box 2</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 
