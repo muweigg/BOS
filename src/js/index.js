@@ -1,13 +1,9 @@
 import '../css/common/common.scss';
 import * as BMapConfig from './custom_map_config.json';
 import * as Echarts from 'echarts';
-
-$(() => {
-  initBMap();
-  initLineChart();
-  initPieChart();
-  initRadarChart();
-});
+import Vue from 'vue';
+import { timer } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 const initBMap = () => {
   const map = new BMap.Map("bmap");
@@ -238,3 +234,26 @@ const initRadarChart = () => {
   myChart.setOption(option, true);
   return myChart;
 }
+
+$(() => {
+  // initBMap();
+  // initLineChart();
+  // initPieChart();
+  // initRadarChart();
+
+  new Vue({
+    el: '.index',
+    data: {
+      systemTime: '',
+    },
+    mounted() {
+      initBMap();
+      initLineChart();
+      initPieChart();
+      initRadarChart();
+      timer(0, 1000).pipe(
+        map(count => new Date().format('MM-dd hh:mm:ss'))
+      ).subscribe(time => this.systemTime = time);
+    }
+  });
+});
