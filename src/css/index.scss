@@ -477,12 +477,18 @@ ul {
             td {
               width: 50%;
               padding: 0 20px;
+              height: 30px;
+              line-height: 30px;
+            }
+
+            th {
+              border-bottom: 1px solid #6ED0FD;
             }
 
             label {
               display: block;
-              height: 30px;
-              line-height: 30px;
+              // height: 30px;
+              // line-height: 30px;
 
               input {
                 margin-top: 10px;

@@ -327,20 +327,24 @@ const initBarChart2 = () => {
     series: [{
         name: '建筑业',
         type: 'bar',
+        stack: '行业',
         data: [320, 332, 301, 334, 390, 330, 320]
       },
       {
         name: '采矿业',
         type: 'bar',
+        stack: '行业',
         data: [120, 132, 101, 134, 90, 230, 210]
       },
       {
         name: '农、林、牧、渔业',
         type: 'bar',
+        stack: '行业',
         data: [620, 732, 701, 734, 1090, 1130, 1120]
       },{
         name: '制造业',
         type: 'bar',
+        stack: '行业',
         data: [320, 332, 301, 334, 390, 330, 320]
       },
     ]
