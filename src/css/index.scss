@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   min-height: 100%;
   color: #fff;
@@ -7,21 +8,27 @@ html, body {
 $fz20: 20px;
 $fz16: 16px;
 $fz13: 13px;
+
 .fz20 {
   font-size: 20px;
 }
+
 .fz16 {
   font-size: 16px;
 }
+
 .fz13 {
   font-size: 13px;
 }
+
 .c1 {
   color: #6ED0FD;
 }
+
 .c2 {
   color: #fff;
 }
+
 .pos-center {
   position: absolute;
   top: 50%;
@@ -81,7 +88,8 @@ ul {
     border: 1px solid #6ED0FD;
   }
 
-  .left-data-area, .right-data-area {
+  .left-data-area,
+  .right-data-area {
     min-width: 500px;
     max-width: 500px;
     position: relative;
@@ -92,7 +100,7 @@ ul {
     display: flex;
     flex-flow: column nowrap;
 
-    > div {
+    >div {
       border: 1px solid #6ED0FD;
       margin: 3px 0;
     }
@@ -115,8 +123,8 @@ ul {
 
   .left-data-area {
     margin-left: -10px;
-    
-    > div {
+
+    >div {
       flex: 1 1 50%;
       display: flex;
       flex-flow: column nowrap;
@@ -248,7 +256,7 @@ ul {
         }
 
         &:hover {
-          
+
           ul {
             visibility: visible;
             opacity: 1;
@@ -260,8 +268,8 @@ ul {
 
   .right-data-area {
     margin-right: -10px;
-    
-    > div {
+
+    >div {
       flex: 1 1 33.333337%;
       display: flex;
       flex-flow: column nowrap;
@@ -295,7 +303,8 @@ ul {
         margin-top: 10px;
         font-size: 16px;
 
-        th, td {
+        th,
+        td {
           text-align: center;
         }
 
@@ -358,7 +367,7 @@ ul {
         }
 
         &:hover {
-          
+
           .weather-detail {
             visibility: visible;
             opacity: 1;
@@ -404,10 +413,81 @@ ul {
         }
 
         &:hover {
-          
+
           ul {
             visibility: visible;
             opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-lg {
+    max-width: 1050px !important;
+
+    .modal-content {
+      background-color: rgba(#36404a, 1);
+
+      .modal-body {
+
+        .row {
+          margin-bottom: 10px;
+        }
+
+        #d-b-1 {
+
+          .bar-chart {
+            height: 380px;
+          }
+
+          table {
+            table-layout: fixed;
+            width: 100%;
+
+            th,
+            td {
+              width: 50%;
+              padding: 0 20px;
+            }
+
+            label {
+              display: block;
+              height: 30px;
+              line-height: 30px;
+
+              input {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+
+        #d-b2-1 {
+
+          .bar-chart {
+            height: 380px;
+          }
+
+          table {
+            table-layout: fixed;
+            width: 100%;
+
+            th,
+            td {
+              width: 50%;
+              padding: 0 20px;
+            }
+
+            label {
+              display: block;
+              height: 30px;
+              line-height: 30px;
+
+              input {
+                margin-top: 10px;
+              }
+            }
           }
         }
       }

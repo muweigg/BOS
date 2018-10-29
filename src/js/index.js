@@ -2,8 +2,12 @@ import '../css/common/common.scss';
 import * as BMapConfig from './custom_map_config.json';
 import * as Echarts from 'echarts';
 import Vue from 'vue';
-import { timer } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {
+  timer
+} from 'rxjs';
+import {
+  map
+} from 'rxjs/operators';
 
 const initBMap = () => {
   const map = new BMap.Map("bmap");
@@ -235,6 +239,118 @@ const initRadarChart = () => {
   return myChart;
 }
 
+const initBarChart = () => {
+  const option = option = {
+    textStyle: {
+      color: '#fff',
+    },
+    color: ['#5b9bd5', '#ed7d31', '#00b050'],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: { // 坐标轴指示器，坐标轴触发有效
+        type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      textStyle: {
+        color: '#fff',
+      },
+      data: ['房地产施工面积', '商品住宅施工面积', '办公施工面积']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      data: ['两江新区', '保税港区', '自贸区', '临空紧急示范区', '工业园', '农业园区', '木耳物流园']
+    }],
+    yAxis: [{
+      type: 'value'
+    }],
+    series: [{
+        name: '房地产施工面积',
+        type: 'bar',
+        data: [320, 332, 301, 334, 390, 330, 320]
+      },
+      {
+        name: '商品住宅施工面积',
+        type: 'bar',
+        data: [120, 132, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '办公施工面积',
+        type: 'bar',
+        data: [620, 732, 701, 734, 1090, 1130, 1120]
+      },
+    ]
+  };
+  const dom = document.querySelector('#d-b-1 .bar-chart');
+  const myChart = Echarts.init(dom);
+  myChart.setOption(option, true);
+  return myChart;
+}
+
+const initBarChart2 = () => {
+  const option = option = {
+    textStyle: {
+      color: '#fff',
+    },
+    color: ['#5b9bd5', '#ed7d31', '#00b050'],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: { // 坐标轴指示器，坐标轴触发有效
+        type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      textStyle: {
+        color: '#fff',
+      },
+      data: ['建筑业', '采矿业', '农、林、牧、渔业', '制造业']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      data: ['两江新区', '保税港区', '自贸区', '临空紧急示范区', '工业园', '农业园区', '木耳物流园']
+    }],
+    yAxis: [{
+      type: 'value'
+    }],
+    series: [{
+        name: '建筑业',
+        type: 'bar',
+        data: [320, 332, 301, 334, 390, 330, 320]
+      },
+      {
+        name: '采矿业',
+        type: 'bar',
+        data: [120, 132, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '农、林、牧、渔业',
+        type: 'bar',
+        data: [620, 732, 701, 734, 1090, 1130, 1120]
+      },{
+        name: '制造业',
+        type: 'bar',
+        data: [320, 332, 301, 334, 390, 330, 320]
+      },
+    ]
+  };
+  const dom = document.querySelector('#d-b2-1 .bar-chart');
+  const myChart = Echarts.init(dom);
+  myChart.setOption(option, true);
+  return myChart;
+}
+
 $(() => {
   // initBMap();
   // initLineChart();
@@ -251,6 +367,15 @@ $(() => {
       initLineChart();
       initPieChart();
       initRadarChart();
+
+      $('.distribution-box').on('shown.bs.modal', () => {
+        initBarChart();
+      });
+
+      $('.distribution-box-2').on('shown.bs.modal', () => {
+        initBarChart2();
+      });
+
       timer(0, 1000).pipe(
         map(count => new Date().format('MM-dd hh:mm:ss'))
       ).subscribe(time => this.systemTime = time);
