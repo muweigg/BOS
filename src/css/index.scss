@@ -445,19 +445,20 @@ ul {
             table-layout: fixed;
             width: 100%;
 
-            th,
-            td {
+            th, td {
               width: 50%;
-              padding: 0 20px;
+            }
+
+            th {
+              height: 30px;
             }
 
             label {
               display: block;
-              height: 30px;
-              line-height: 30px;
+              margin: 0;
 
               input {
-                margin-top: 10px;
+                margin-top: 5px;
               }
             }
           }
@@ -473,25 +474,20 @@ ul {
             table-layout: fixed;
             width: 100%;
 
-            th,
-            td {
+            th, td {
               width: 50%;
-              padding: 0 20px;
-              height: 30px;
-              line-height: 30px;
             }
 
             th {
-              border-bottom: 1px solid #6ED0FD;
+              height: 30px;
             }
 
             label {
               display: block;
-              // height: 30px;
-              // line-height: 30px;
+              margin: 0;
 
               input {
-                margin-top: 10px;
+                margin-top: 5px;
               }
             }
           }
