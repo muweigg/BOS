@@ -14,462 +14,693 @@
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=pwb6K1HGm6jmTQipCdNgmq8cGUnLdLfp"></script>
 </head>
 
-<body d-f fxd-c fx-auto>
+<body>
 
-  <div class="container-fluid index">
-    <div id="bmap"></div>
-    <h4 class="title"><img src="../assets/images/logo.png" alt="">渝北区数据指挥中心平台</h4>
+<div class="container-fluid index">
+  <div id="bmap" data-toggle="modal" data-target=".distribution-box-3"></div>
+  <h4 class="title"><img src="../assets/images/logo.png" alt="">渝北区数据指挥中心平台</h4>
 
-    <div class="left-data-area">
-      <div class="l-t-1">
-        <h5>
-          指标轮询
-          <span class="pos-center fz16 c2">财政收入总值（亿元）</span>
-          <i class="fa fa-sort-amount-desc fz16 c2"></i>
-        </h5>
-        <div class="text-center">（2018-01——2018-08）</div>
-        <div class="list-wrap">
-          <ul>
-            <li>
-              <div class="num">1</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 100%;"></div>
-              </div>
-              <div class="count">1414.44</div>
-            </li>
-            <li>
-              <div class="num">2</div>
-              <div class="region">创新经济走廊</div>
-              <div class="c-progress">
-                <div style="width: 90%;"></div>
-              </div>
-              <div class="count">900.44</div>
-            </li>
-            <li>
-              <div class="num">3</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 80%;"></div>
-              </div>
-              <div class="count">800.44</div>
-            </li>
-            <li>
-              <div class="num">4</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 70%;"></div>
-              </div>
-              <div class="count">700.44</div>
-            </li>
-            <li>
-              <div class="num">5</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 60%;"></div>
-              </div>
-              <div class="count">600.44</div>
-            </li>
-            <li>
-              <div class="num">6</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 50%;"></div>
-              </div>
-              <div class="count">500.44</div>
-            </li>
-            <li>
-              <div class="num">7</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 40%;"></div>
-              </div>
-              <div class="count">400.44</div>
-            </li>
-            <li>
-              <div class="num">8</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 30%;"></div>
-              </div>
-              <div class="count">300.44</div>
-            </li>
-            <li>
-              <div class="num">9</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 20%;"></div>
-              </div>
-              <div class="count">200.44</div>
-            </li>
-            <li>
-              <div class="num">10</div>
-              <div class="region">两江新区</div>
-              <div class="c-progress">
-                <div style="width: 10%;"></div>
-              </div>
-              <div class="count">100.44</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="l-t-2">
-        <h5>经济指标曲线 <span class="pull-right">亿元</span></h5>
-        <div class="line-chart"></div>
-      </div>
-
-      <div class="tools">
-        <!-- 系统时间 -->
-        <div class="system-time">
-          系统时间：{{ systemTime }}
-        </div>
-
-        <!-- 行业分布 -->
-        <div class="distribution">
-          行业分布
-          <ul>
-            <li data-toggle="modal" data-target=".distribution-box">农、林、牧、渔业</li>
-            <li data-toggle="modal" data-target=".distribution-box">采矿业</li>
-            <li data-toggle="modal" data-target=".distribution-box">制造业</li>
-            <li data-toggle="modal" data-target=".distribution-box">住宿和餐饮业</li>
-            <li data-toggle="modal" data-target=".distribution-box">金融业</li>
-            <li data-toggle="modal" data-target=".distribution-box">房地产业</li>
-            <li data-toggle="modal" data-target=".distribution-box">租赁和商务服务</li>
-            <li>...</li>
-          </ul>
-        </div>
+  <div class="left-data-area">
+    <div class="l-t-1">
+      <h5>
+        指标轮询
+        <span class="pos-center fz16 c2">财政收入总值（亿元）</span>
+        <i class="fa fa-sort-amount-desc fz16 c2"></i>
+      </h5>
+      <div class="text-center">（2018-01——2018-08）</div>
+      <div class="list-wrap">
+        <ul>
+          <li>
+            <div class="num">1</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 100%;"></div>
+            </div>
+            <div class="count">1414.44</div>
+          </li>
+          <li>
+            <div class="num">2</div>
+            <div class="region">创新经济走廊</div>
+            <div class="c-progress">
+              <div style="width: 90%;"></div>
+            </div>
+            <div class="count">900.44</div>
+          </li>
+          <li>
+            <div class="num">3</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 80%;"></div>
+            </div>
+            <div class="count">800.44</div>
+          </li>
+          <li>
+            <div class="num">4</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 70%;"></div>
+            </div>
+            <div class="count">700.44</div>
+          </li>
+          <li>
+            <div class="num">5</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 60%;"></div>
+            </div>
+            <div class="count">600.44</div>
+          </li>
+          <li>
+            <div class="num">6</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 50%;"></div>
+            </div>
+            <div class="count">500.44</div>
+          </li>
+          <li>
+            <div class="num">7</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 40%;"></div>
+            </div>
+            <div class="count">400.44</div>
+          </li>
+          <li>
+            <div class="num">8</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 30%;"></div>
+            </div>
+            <div class="count">300.44</div>
+          </li>
+          <li>
+            <div class="num">9</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 20%;"></div>
+            </div>
+            <div class="count">200.44</div>
+          </li>
+          <li>
+            <div class="num">10</div>
+            <div class="region">两江新区</div>
+            <div class="c-progress">
+              <div style="width: 10%;"></div>
+            </div>
+            <div class="count">100.44</div>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="right-data-area">
-      <div class="r-t-1">
-        <h5>行业分类：木耳物流园</h5>
-        <div class="pie-chart"></div>
-      </div>
-
-      <div class="r-t-2">
-        <h5>指标雷达：木耳物流园VS两江新区</h5>
-        <div class="radar-chart"></div>
-      </div>
-
-      <div class="r-t-3">
-        <h5>核心指标增长</h5>
-        <div class="list-wrap">
-          <table>
-            <thead>
-              <th>指标名称</th>
-              <th>指标月（18/10）</th>
-              <th>同比增长</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>工业生产总值</td>
-                <td>1643.45 亿</td>
-                <td><i class="ion-arrow-up-a fz20"></i> 14.54%</td>
-              </tr>
-              <tr>
-                <td>固定投资总值</td>
-                <td>589.35 亿</td>
-                <td><i class="ion-arrow-up-a fz20"></i> 12.24%</td>
-              </tr>
-              <tr>
-                <td>财务收入总值</td>
-                <td>283.21 亿</td>
-                <td><i class="ion-arrow-down-a fz20"></i> 5.67%</td>
-              </tr>
-              <tr>
-                <td>居民消费支出总值</td>
-                <td>756.32 亿</td>
-                <td><i class="ion-arrow-down-a fz20"></i> 2.43%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="tools">
-        <!-- 天气 -->
-        <div class="weather">
-          <img src="../assets/images/temp/weather.png" width="30" alt="">
-          多云，17&#8451;/25&#8451;
-          <div class="weather-detail">
-            <div>东南风，4级</div>
-            <div>PM 2.5 22pg/m&sup2;</div>
-            <div>空气质量优</div>
-            <div d-f>
-              <div ta-c fx-auto>
-                <div>明天</div>
-                <div>17&#8451;-25&#8451;</div>
-                <img src="../assets/images/temp/weather.png" width="30" alt="">
-              </div>
-              <div ta-c fx-auto>
-                <div>后天</div>
-                <div>17&#8451;/25&#8451;</div>
-                <img src="../assets/images/temp/weather.png" width="30" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 指标分布 -->
-        <div class="distribution">
-          指标分布
-          <ul>
-            <li data-toggle="modal" data-target=".distribution-box-2">国内生产总值</li>
-            <li data-toggle="modal" data-target=".distribution-box-2">固定投资总额</li>
-            <li data-toggle="modal" data-target=".distribution-box-2">财政收入</li>
-            <li data-toggle="modal" data-target=".distribution-box-2">贷款总额</li>
-            <li>...</li>
-          </ul>
-        </div>
-      </div>
+    <div class="l-t-2">
+      <h5>经济指标曲线 <span class="pull-right">亿元</span></h5>
+      <div class="line-chart"></div>
     </div>
 
-    <div class="bottom">
-      111
-    </div>
+    <div class="tools">
+      <!-- 系统时间 -->
+      <div class="system-time">
+        系统时间：{{ systemTime }}
+      </div>
 
-    <div class="modal fade distribution-box" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-      aria-hidden="true" style="display: none;">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myLargeModalLabel">房地产行业 -- 2018 年度</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-2">企业总数</div>
-              <div class="col-2">78,956</div>
-              <div class="col-2">就业人员（万人）</div>
-              <div class="col-2">78,788</div>
-              <div class="col-2">生产总值（亿元）</div>
-              <div class="col-2">17,559,25</div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <ul class="nav nav-tabs">
-                  <li class="nav-item">
-                    <a href="#d-b-1" data-toggle="tab" aria-expanded="false" class="nav-link active">
-                      区域分布
-                    </a>
-                  </li>
-                </ul>
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="d-b-1">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="bar-chart"></div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>指标</th>
-                              <th>值（亿元）</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <label>
-                                  房地产施工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  商品住宅施工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  办公楼施工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  商业营业用房新开工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  房地产竣工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  商品住宅竣工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  办公楼竣工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- 行业分布 -->
+      <div class="distribution">
+        行业分布
+        <ul>
+          <li data-toggle="modal" data-target=".distribution-box">农、林、牧、渔业</li>
+          <li data-toggle="modal" data-target=".distribution-box">采矿业</li>
+          <li data-toggle="modal" data-target=".distribution-box">制造业</li>
+          <li data-toggle="modal" data-target=".distribution-box">住宿和餐饮业</li>
+          <li data-toggle="modal" data-target=".distribution-box">金融业</li>
+          <li data-toggle="modal" data-target=".distribution-box">房地产业</li>
+          <li data-toggle="modal" data-target=".distribution-box">租赁和商务服务</li>
+          <li>...</li>
+        </ul>
       </div>
     </div>
-
-    <div class="modal fade distribution-box-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-      aria-hidden="true" style="display: none;">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myLargeModalLabel">国内生产总值 -- 2018年度</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-2">企业总数</div>
-              <div class="col-2">78,956</div>
-              <div class="col-2">就业人员（万人）</div>
-              <div class="col-2">78,788</div>
-              <div class="col-2">生产总值（亿元）</div>
-              <div class="col-2">17,559,25</div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <ul class="nav nav-tabs">
-                  <li class="nav-item">
-                    <a href="#d-b2-1" data-toggle="tab" aria-expanded="false" class="nav-link active">
-                      区域分布
-                    </a>
-                  </li>
-                </ul>
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="d-b2-1">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="bar-chart"></div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>指标</th>
-                              <th>值（亿元）</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <label>
-                                  建筑业
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  采矿业
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  农、林、牧、渔业
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  制造业
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  房地产竣工面积（万平方米）
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  金融业
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <label>
-                                  房地产业
-                                  <input type="checkbox" class="pull-right">
-                                </label>
-                              </td>
-                              <td>17,559.25</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
   </div>
+
+  <div class="right-data-area">
+    <div class="r-t-1">
+      <h5>行业分类：木耳物流园</h5>
+      <div class="pie-chart"></div>
+    </div>
+
+    <div class="r-t-2">
+      <h5>指标雷达：木耳物流园VS两江新区</h5>
+      <div class="radar-chart"></div>
+    </div>
+
+    <div class="r-t-3">
+      <h5>核心指标增长</h5>
+      <div class="list-wrap">
+        <table>
+          <thead>
+          <th>指标名称</th>
+          <th>指标月（18/10）</th>
+          <th>同比增长</th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>工业生产总值</td>
+            <td>1643.45 亿</td>
+            <td><i class="ion-arrow-up-a fz20"></i> 14.54%</td>
+          </tr>
+          <tr>
+            <td>固定投资总值</td>
+            <td>589.35 亿</td>
+            <td><i class="ion-arrow-up-a fz20"></i> 12.24%</td>
+          </tr>
+          <tr>
+            <td>财务收入总值</td>
+            <td>283.21 亿</td>
+            <td><i class="ion-arrow-down-a fz20"></i> 5.67%</td>
+          </tr>
+          <tr>
+            <td>居民消费支出总值</td>
+            <td>756.32 亿</td>
+            <td><i class="ion-arrow-down-a fz20"></i> 2.43%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--进入系统-->
+      <div class="goto-system">
+        <span>进入<br>系统</span>
+      </div>
+    </div>
+
+    <div class="tools">
+      <!-- 天气 -->
+      <div class="weather">
+        <img src="../assets/images/temp/weather.png" width="30" alt="">
+        多云，17&#8451;/25&#8451;
+        <div class="weather-detail">
+          <div>东南风，4级</div>
+          <div>PM 2.5 22pg/m&sup2;</div>
+          <div>空气质量优</div>
+          <div d-f>
+            <div ta-c fx-auto>
+              <div>明天</div>
+              <div>17&#8451;-25&#8451;</div>
+              <img src="../assets/images/temp/weather.png" width="30" alt="">
+            </div>
+            <div ta-c fx-auto>
+              <div>后天</div>
+              <div>17&#8451;/25&#8451;</div>
+              <img src="../assets/images/temp/weather.png" width="30" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 指标分布 -->
+      <div class="distribution">
+        指标分布
+        <ul>
+          <li data-toggle="modal" data-target=".distribution-box-2">国内生产总值</li>
+          <li data-toggle="modal" data-target=".distribution-box-2">固定投资总额</li>
+          <li data-toggle="modal" data-target=".distribution-box-2">财政收入</li>
+          <li data-toggle="modal" data-target=".distribution-box-2">贷款总额</li>
+          <li>...</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <a href="javascript:">
+      <img src="../assets/images/temp/news.png" alt="">
+      新闻新闻新闻新闻新闻新闻新闻新闻
+    </a>
+    <a href="javascript:">
+      <img src="../assets/images/temp/news.png" alt="">
+      新闻新闻新闻新闻新闻新闻新闻新闻
+    </a>
+    <a href="javascript:">
+      <img src="../assets/images/temp/news.png" alt="">
+      新闻新闻新闻新闻新闻新闻新闻新闻
+    </a>
+    <a href="javascript:">
+      <img src="../assets/images/temp/news.png" alt="">
+      新闻新闻新闻新闻新闻新闻新闻新闻
+    </a>
+    <a href="javascript:">
+      <img src="../assets/images/temp/news.png" alt="">
+      新闻新闻新闻新闻新闻新闻新闻新闻
+    </a>
+  </div>
+
+  <div class="modal fade distribution-box" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+       aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myLargeModalLabel">房地产行业 -- 2018 年度</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-2">企业总数</div>
+            <div class="col-2">78,956</div>
+            <div class="col-2">就业人员（万人）</div>
+            <div class="col-2">78,788</div>
+            <div class="col-2">生产总值（亿元）</div>
+            <div class="col-2">17,559,25</div>
+          </div>
+          <div class="row m-t-15">
+            <div class="col-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a href="#d-b-1" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                    区域分布
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="d-b-1">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="bar-chart"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th>指标</th>
+                          <th>值（亿元）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>
+                            <label>
+                              房地产施工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              商品住宅施工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              办公楼施工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              商业营业用房新开工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              房地产竣工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              商品住宅竣工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              办公楼竣工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade distribution-box-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+       aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myLargeModalLabel">国内生产总值 -- 2018年度</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-2">企业总数</div>
+            <div class="col-2">78,956</div>
+            <div class="col-2">就业人员（万人）</div>
+            <div class="col-2">78,788</div>
+            <div class="col-2">生产总值（亿元）</div>
+            <div class="col-2">17,559,25</div>
+          </div>
+          <div class="row m-t-15">
+            <div class="col-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a href="#d-b2-1" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                    区域分布
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="d-b2-1">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="bar-chart"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th>指标</th>
+                          <th>值（亿元）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>
+                            <label>
+                              建筑业
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              采矿业
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              农、林、牧、渔业
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              制造业
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              房地产竣工面积（万平方米）
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              金融业
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label>
+                              房地产业
+                              <input type="checkbox" class="pull-right">
+                            </label>
+                          </td>
+                          <td>17,559.25</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade distribution-box-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+       aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myLargeModalLabel">两江新区 -- 2018年度</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-2">企业总数</div>
+            <div class="col-2">78,956</div>
+            <div class="col-2">就业人员（万人）</div>
+            <div class="col-2">78,788</div>
+            <div class="col-2">生产总值（亿元）</div>
+            <div class="col-2">17,559,25</div>
+          </div>
+          <div class="row">
+            <div class="col-2">固定资产投资（亿元）</div>
+            <div class="col-2">78,956</div>
+            <div class="col-2">财政收入（亿元</div>
+            <div class="col-2">78,788</div>
+          </div>
+          <div class="row m-t-15">
+            <div class="col-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a href="#d-b3-1" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                    经济核算
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#d-b3-2" data-toggle="tab" aria-expanded="false" class="nav-link">
+                    行业分析
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#d-b3-3" data-toggle="tab" aria-expanded="false" class="nav-link">
+                    基础指标分析
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="d-b3-1">
+                  <div class="row">
+                    <div class="col-3">
+                      <ul>
+                        <li class="active"><a href="javascript:">地区生产总值</a></li>
+                        <li><a href="javascript:">地区生产总值比重</a></li>
+                        <li><a href="javascript:">地区生产总值指数（上年=100）</a></li>
+                        <li><a href="javascript:">第三次产业贡献率</a></li>
+                        <li><a href="javascript:">三次产业拉动力</a></li>
+                        <li><a href="javascript:">收入法地区生产总值</a></li>
+                        <li><a href="javascript:">支出法地区生产总值</a></li>
+                        <li><a href="javascript:">居民消费支出</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-9">
+                      <div class="row">
+                        <div class="col-12">
+                          <i class="fa fa-bar-chart-o"></i>
+                          <span class="pull-right tools">
+                              <a href="javascript:">打印</a>
+                              <a href="javascript:">保存</a>
+                            </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="bar-chart"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <table class="table">
+                            <thead>
+                            <tr>
+                              <th>指标</th>
+                              <th>值（亿元）</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>
+                                <label>
+                                  户籍总户数（万户）
+                                  <input type="checkbox" class="pull-right">
+                                </label>
+                              </td>
+                              <td>17,559.25</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>
+                                  户籍总人口（万人）
+                                  <input type="checkbox" class="pull-right">
+                                </label>
+                              </td>
+                              <td>17,559.25</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>
+                                  男性户籍人口（万人）
+                                  <input type="checkbox" class="pull-right">
+                                </label>
+                              </td>
+                              <td>17,559.25</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>
+                                  女性户籍人口（万人）
+                                  <input type="checkbox" class="pull-right">
+                                </label>
+                              </td>
+                              <td>17,559.25</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>
+                                  农业人口（万人）
+                                  <input type="checkbox" class="pull-right">
+                                </label>
+                              </td>
+                              <td>17,559.25</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>
+                                  非农业人口（万人）
+                                  <input type="checkbox" class="pull-right">
+                                </label>
+                              </td>
+                              <td>17,559.25</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade show" id="d-b3-2">
+                  <div class="row">
+                    <div class="col-3">
+                      <ul>
+                        <li class="active"><a href="javascript:">行业分析概览</a></li>
+                        <li><a href="javascript:">农、林、牧、渔业</a></li>
+                        <li><a href="javascript:">采矿业</a></li>
+                        <li><a href="javascript:">制造业</a></li>
+                        <li><a href="javascript:">电力、燃气及水的生产和供应</a></li>
+                        <li><a href="javascript:">建筑业</a></li>
+                        <li><a href="javascript:">交通运输、仓储和邮政</a></li>
+                        <li><a href="javascript:">信息传输、计算机服务和软件业</a></li>
+                        <li><a href="javascript:">批发和零售</a></li>
+                        <li><a href="javascript:">住宿和餐饮业</a></li>
+                        <li><a href="javascript:">金融业</a></li>
+                        <li><a href="javascript:">房地产业</a></li>
+                        <li><a href="javascript:">租赁和商务服务</a></li>
+                        <li><a href="javascript:">科学研究、技术服务和地址勘察</a></li>
+                        <li><a href="javascript:">水利、环境和公共设施管理</a></li>
+                        <li><a href="javascript:">居民服务和其他服务</a></li>
+                        <li><a href="javascript:">教育</a></li>
+                        <li><a href="javascript:">卫生、社会保障和社会福利</a></li>
+                        <li><a href="javascript:">文化、体育和娱乐业</a></li>
+                        <li><a href="javascript:">公共管理和社会组织</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-9">
+                      <div class="row">
+                        <div class="col-12">
+                          <i class="fa fa-bar-chart-o"></i>
+                          <span class="pull-right tools">
+                              <a href="javascript:">打印</a>
+                              <a href="javascript:">保存</a>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade show" id="d-b3-3">
+                  <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-9">
+                      <div class="row">
+                        <div class="col-12">
+                          <i class="fa fa-bar-chart-o"></i>
+                          <span class="pull-right tools">
+                              <a href="javascript:">打印</a>
+                              <a href="javascript:">保存</a>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
 
 </body>
 

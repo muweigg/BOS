@@ -42,11 +42,11 @@ const initLineChart = () => {
       splitLine: false,
     },
     series: [{
-        name: '工业总产值',
-        type: 'line',
-        stack: '总量',
-        data: [120, 132, 101, 134, 90, 230, 210]
-      },
+      name: '工业总产值',
+      type: 'line',
+      stack: '总量',
+      data: [120, 132, 101, 134, 90, 230, 210]
+    },
       {
         name: '财务收入',
         type: 'line',
@@ -86,9 +86,9 @@ const initPieChart = () => {
       ['其他']: true,
     },
     seriesData: [{
-        name: "农、牧、林、渔",
-        value: 37757
-      },
+      name: "农、牧、林、渔",
+      value: 37757
+    },
       {
         name: "采矿和采石",
         value: 6358
@@ -195,9 +195,9 @@ const initRadarChart = () => {
         }
       },
       indicator: [{
-          name: '工业生产总值',
-          max: 6500
-        },
+        name: '工业生产总值',
+        max: 6500
+      },
         {
           name: '从业人员数',
           max: 16000
@@ -223,9 +223,9 @@ const initRadarChart = () => {
       type: 'radar',
       // areaStyle: {normal: {}},
       data: [{
-          value: [4300, 10000, 28000, 35000, 50000],
-          name: '木耳物流园'
-        },
+        value: [4300, 10000, 28000, 35000, 50000],
+        name: '木耳物流园'
+      },
         {
           value: [5000, 14000, 28000, 31000, 42000],
           name: '两江新区'
@@ -271,10 +271,10 @@ const initBarChart = () => {
       type: 'value'
     }],
     series: [{
-        name: '房地产施工面积',
-        type: 'bar',
-        data: [320, 332, 301, 334, 390, 330, 320]
-      },
+      name: '房地产施工面积',
+      type: 'bar',
+      data: [320, 332, 301, 334, 390, 330, 320]
+    },
       {
         name: '商品住宅施工面积',
         type: 'bar',
@@ -325,11 +325,11 @@ const initBarChart2 = () => {
       type: 'value'
     }],
     series: [{
-        name: '建筑业',
-        type: 'bar',
-        stack: '行业',
-        data: [320, 332, 301, 334, 390, 330, 320]
-      },
+      name: '建筑业',
+      type: 'bar',
+      stack: '行业',
+      data: [320, 332, 301, 334, 390, 330, 320]
+    },
       {
         name: '采矿业',
         type: 'bar',
@@ -341,7 +341,7 @@ const initBarChart2 = () => {
         type: 'bar',
         stack: '行业',
         data: [620, 732, 701, 734, 1090, 1130, 1120]
-      },{
+      }, {
         name: '制造业',
         type: 'bar',
         stack: '行业',
@@ -350,6 +350,112 @@ const initBarChart2 = () => {
     ]
   };
   const dom = document.querySelector('#d-b2-1 .bar-chart');
+  const myChart = Echarts.init(dom);
+  myChart.setOption(option, true);
+  return myChart;
+}
+
+const initBarChart3 = () => {
+  const option = option = {
+    textStyle: {
+      color: '#fff',
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: { // 坐标轴指示器，坐标轴触发有效
+        type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    legend: {
+      // bottom: -50,
+      textStyle: {
+        color: '#fff',
+        fontSize: 10,
+      },
+      data: [
+        '地区生产总值(亿元)',
+        '第一产业增加值(亿元)',
+        '第二产业增加值(亿元)',
+        '工业增加值(亿元)',
+        '建筑业增加值(亿元)',
+        '第三产业增加值(亿元)',
+        '交通运输，仓储和邮政业增加值(亿元)',
+        '批发和零售业增加值(亿元)',
+        '住宿和餐饮业增加值(亿元)',
+        '金融业增加值(亿元)',
+        '房地产业增加值(亿元)',
+        '其他行业增加值(亿元)'
+      ],
+      x: 'left',
+      // y: 'bottom'
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      show: false,
+      data: []
+    }],
+    yAxis: [{
+      type: 'value',
+      splitLine: false,
+    }],
+    series: [{
+      name: '地区生产总值(亿元)',
+      type: 'bar',
+      data: [1700]
+    }, {
+      name: '第一产业增加值(亿元)',
+      type: 'bar',
+      data: [1500]
+    }, {
+      name: '第二产业增加值(亿元)',
+      type: 'bar',
+      data: [600]
+    }, {
+      name: '工业增加值(亿元)',
+      type: 'bar',
+      data: [500]
+    }, {
+      name: '建筑业增加值(亿元)',
+      type: 'bar',
+      data: [800]
+    }, {
+      name: '第三产业增加值(亿元)',
+      type: 'bar',
+      data: [900]
+    }, {
+      name: '交通运输，仓储和邮政业增加值(亿元)',
+      type: 'bar',
+      data: [1100]
+    }, {
+      name: '批发和零售业增加值(亿元)',
+      type: 'bar',
+      data: [200]
+    }, {
+      name: '住宿和餐饮业增加值(亿元)',
+      type: 'bar',
+      data: [600]
+    }, {
+      name: '金融业增加值(亿元)',
+      type: 'bar',
+      data: [1400]
+    }, {
+      name: '房地产业增加值(亿元)',
+      type: 'bar',
+      data: [2200]
+    }, {
+      name: '其他行业增加值(亿元)',
+      type: 'bar',
+      data: [320]
+    },
+    ]
+  };
+  const dom = document.querySelector('#d-b3-1 .bar-chart');
   const myChart = Echarts.init(dom);
   myChart.setOption(option, true);
   return myChart;
@@ -380,9 +486,19 @@ $(() => {
         initBarChart2();
       });
 
+      $('.distribution-box-3').on('shown.bs.modal', () => {
+        initBarChart3();
+      });
+
+      $('.distribution-box-3 .nav-tabs').on('shown.bs.tab', (e) => {
+      });
+
+      // $('#jstree').jstree(true)
+
       timer(0, 1000).pipe(
         map(count => new Date().format('MM-dd hh:mm:ss'))
       ).subscribe(time => this.systemTime = time);
-    }
+    },
+    methods: {}
   });
 });
