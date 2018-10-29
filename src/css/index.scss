@@ -638,4 +638,21 @@ ul {
       }
     }
   }
+
+  .goto-system-box {
+
+    a {
+      display: block;
+      width: 120px;
+      height: 120px;
+      text-align: center;
+      //border: 1px solid #6ED0FD;
+      margin: 10px auto;
+
+      i {
+        font-size: 72px;
+        margin-top: 10px;
+      }
+    }
+  }
 }
