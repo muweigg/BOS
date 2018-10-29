@@ -92,7 +92,8 @@ ul {
   .right-data-area {
     min-width: 500px;
     max-width: 500px;
-    position: relative;
+    position: absolute;
+    top: 0;
     z-index: 0;
     margin-bottom: 70px;
     background-color: rgba(#000, .2);
@@ -122,24 +123,25 @@ ul {
   }
 
   .left-data-area {
-    margin-left: -10px;
+    left: 0;
 
-    >div {
-      flex: 1 1 50%;
-      display: flex;
-      flex-flow: column nowrap;
-    }
+    // >div {
+    //   flex: 1 1 50%;
+    //   display: flex;
+    //   flex-flow: column nowrap;
+    // }
 
     .l-t-1 {
 
       .list-wrap {
         overflow-x: hidden;
         overflow-y: auto;
+        padding: 10px 0;
       }
 
       ul {
         padding: 0 15px 0 10px;
-        margin-top: 10px;
+        // margin-top: 10px;
 
         li {
           height: 30px;
@@ -199,8 +201,9 @@ ul {
     .l-t-2 {
 
       .line-chart {
-        flex: 1 1 auto;
+        // flex: 1 1 auto;
         margin-top: 10px;
+        height: 380px;
       }
     }
 
@@ -267,27 +270,29 @@ ul {
   }
 
   .right-data-area {
-    margin-right: -10px;
+    right: 0;
 
-    >div {
-      flex: 1 1 33.333337%;
-      display: flex;
-      flex-flow: column nowrap;
-    }
+    // >div {
+    //   flex: 1 1 33.333337%;
+    //   display: flex;
+    //   flex-flow: column nowrap;
+    // }
 
     .r-t-1 {
 
       .pie-chart {
-        flex: 1 1 auto;
+        // flex: 1 1 auto;
         margin-top: 10px;
+        height: 232px;
       }
     }
 
     .r-t-2 {
 
       .radar-chart {
-        flex: 1 1 auto;
+        // flex: 1 1 auto;
         margin-top: 10px;
+        height: 232px;
       }
     }
 
@@ -296,11 +301,11 @@ ul {
       .list-wrap {
         overflow-x: hidden;
         overflow-y: auto;
+        padding: 10px 0;
       }
 
       table {
         width: 100%;
-        margin-top: 10px;
         font-size: 16px;
 
         th,
