@@ -1,3 +1,120 @@
 .different-contrast {
-  
+  overflow-x: auto;
+
+  .enterprises {
+    display: flex;
+    flex-flow: row nowrap;
+
+    > .enterprise {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      min-width: 320px;
+      height: 120px;
+      position: relative;
+
+      &:nth-child(odd) {
+        background-color: #36404a;
+      }
+
+      .ion-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+      }
+
+      > div:nth-of-type(1) {
+        text-align: center;
+
+        div {
+          margin-top: 10px;
+        }
+      }
+
+      .tools {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 0 15px;
+
+        label {
+          display: flex;
+          align-items: center;
+          margin: 0 20px;
+        }
+
+        .checkbox.checkbox-inverse {
+          position: relative;
+
+          input[type=checkbox] {
+            position: absolute;
+          }
+        }
+
+        button {
+
+          &.bl {
+            position: absolute;
+            left: 15px;
+          }
+
+          &.br {
+            position: absolute;
+            right: 15px;
+          }
+        }
+      }
+
+      .custom {
+
+        input[type=text] {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  section {
+
+    header {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      cursor: pointer;
+
+      i.fa-minus, i.fa-plus {
+        margin-right: 10px;
+      }
+    }
+
+    .list {
+
+      > div {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 1px;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          min-width: 320px;
+          max-width: 320px;
+
+          &:nth-child(odd) {
+            background-color: #36404a;
+          }
+
+          &:nth-child(even) {
+            //border-top: 1px solid #36404a;
+            border-bottom: 1px solid #36404a;
+          }
+        }
+      }
+    }
+  }
 }

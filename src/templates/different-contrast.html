@@ -4,9 +4,68 @@
 
 <div class="container-fluid different-contrast">
 
-  <!-- Page-Title -->
-  <div class="row">
-  </div>
+  <header class="enterprises">
+    <div class="enterprise">
+      <div><h5>企业数据对比详情</h5></div>
+      <div class="tools">
+        <div class="checkbox checkbox-inverse">
+          <input id="same-hidden" type="checkbox">
+          <label for="same-hidden">
+            隐藏相同项
+          </label>
+        </div>
+        <div class="checkbox checkbox-inverse">
+          <input id="diff-hidden" type="checkbox">
+          <label for="diff-hidden">
+            隐藏空白项
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="enterprise" v-for="(enterprise, index) in enterprises" :key="enterprise.id">
+      <i class="ion-close"></i>
+      <div>
+        {{ enterprise.name }}
+        <div class="date-time">{{ enterprise.dateTime }}</div>
+      </div>
+      <div class="tools">
+        <button class="btn btn-inverse waves-effect waves-light bl"
+          v-if="index !== 0">
+          <i class="ion-arrow-left-a"></i>
+        </button>
+        <button class="btn btn-inverse waves-effect waves-light br"
+          v-if="index !== enterprises.length - 1">
+          <i class="ion-arrow-right-a"></i>
+        </button>
+      </div>
+    </div>
+    <div class="enterprise custom">
+      <div>
+        <input type="text" placeholder="请输入企业名称" class="form-control">
+      </div>
+      <div class="tools">
+        <select class="form-control">
+          <option value="0">选择上报时间</option>
+          <option value="1">2018年10月</option>
+          <option value="2">2018年9月</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
-</div> <!-- container -->
+  <!--<section v-for="(section, index) in sections" :key="section.title">
+    <header @click="toggle">
+      <i class="fa fa-minus"></i>
+      {{ section.title }}
+    </header>
+    <div class="list">
+      <div v-for="row in section.rows">
+        <div>{{ row.name }}</div>
+        <div v-for="item in row.data" :key="item">{{ item }}</div>
+        <div></div>
+      </div>
+    </div>
+  </section>-->
+
+</div>
 {% endblock %}
