@@ -1,121 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
-    <title>
-        {% block title %}BOS{% endblock %}
-    </title>
-    <script>window.resizefunc = [];</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <title>
+    {% block title %}BOS{% endblock %}
+  </title>
+  <script>window.resizefunc = [];</script>
 </head>
 <body class="fixed-left">
-    <script src="./assets/js/common/ubold/modernizr.min.js"></script>
+<script src="./assets/js/common/ubold/modernizr.min.js"></script>
 
-    <!-- Begin page -->
-    <div id="wrapper">
+<!-- Begin page -->
+<div id="wrapper">
 
-        <!-- Top Bar Start -->
-        <div class="topbar">
-            <!-- LOGO -->
-            <div class="topbar-left">
-                <div class="text-center">
-                    <a href="index.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Ub<i class="md md-album"></i>ld</span></a>
-                    <!-- Image Logo here -->
-                    <!--<a href="index.html" class="logo">-->
-                        <!--<i class="icon-c-logo"> <img src="assets/images/logo_sm.png" height="42"/> </i>-->
-                        <!--<span><img src="assets/images/logo_light.png" height="20"/></span>-->
-                    <!--</a>-->
-                </div>
-            </div>
-            
-            <!-- Button mobile view to collapse sidebar menu -->
-            <nav class="navbar-custom">
-    
-                <ul class="list-inline menu-left mb-0">
-                    <li class="float-left">
-                        <button class="button-menu-mobile open-left waves-light waves-effect">
-                            <i class="dripicons-menu"></i>
-                        </button>
-                    </li>
-                </ul>
-    
-            </nav>
-        </div>
-        <!-- Top Bar End -->
-
-
-        <!-- ========== Left Sidebar start ========== -->
-
-        <div class="left side-menu">
-            <div class="sidebar-inner slimscrollleft">
-                <!--- Divider -->
-                    <div id="sidebar-menu">
-                        <ul>
-
-                        	<li class="text-muted menu-title">导航</li>
-
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 数据指挥中心平台 </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.html" target="_blank">数据指挥中心平台</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 大数据分析管理平台 </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="index2.html">自定义查询模板</a></li>
-                                    <li><a href="index3.html">自定义统计模板</a></li>
-                                    <li><a href="index4.html">自定义报告模板</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 数据应用平台 </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="index5.html">综合数据查询</a></li>
-                                    <li><a href="enterprise-data-query.html">企业数据查询</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="clearfix"></div>
-            </div>
-        </div>
-        <!-- ========== Left Sidebar end ========== -->
-
-        <!-- ========== main content start ========== -->
-        <div class="content-page">
-
-            <!-- content -->
-            <div class="content">
-                {% block content %}{% endblock %}
-            </div>
-
-            <!-- content -->
-
-            <!-- footer -->
-            <footer class="footer">
-                2015 © Ubold.
-            </footer>
-        </div>
-
-        <!-- ========== main content end ========== -->
-
-
-        <!-- ========== Right sidebar start ========== -->
-        <div class="side-bar right-bar nicescroll">
-            ...
-        </div>
-
-        <!-- ========== Right sidebar end ========== -->
-
+  <!-- Top Bar Start -->
+  <div class="topbar">
+    <!-- LOGO -->
+    <div class="topbar-left">
+      <div class="text-center">
+        <a href="index.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Ub<i
+          class="md md-album"></i>ld</span></a>
+        <!-- Image Logo here -->
+        <!--<a href="index.html" class="logo">-->
+        <!--<i class="icon-c-logo"> <img src="assets/images/logo_sm.png" height="42"/> </i>-->
+        <!--<span><img src="assets/images/logo_light.png" height="20"/></span>-->
+        <!--</a>-->
+      </div>
     </div>
-    <!-- scripts -->
+
+    <!-- Button mobile view to collapse sidebar menu -->
+    <nav class="navbar-custom">
+
+      <ul class="list-inline menu-left mb-0">
+        <li class="float-left">
+          <button class="button-menu-mobile open-left waves-light waves-effect">
+            <i class="dripicons-menu"></i>
+          </button>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+  <!-- Top Bar End -->
+
+
+  <!-- ========== Left Sidebar start ========== -->
+
+  <div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+      <!--- Divider -->
+      <div id="sidebar-menu">
+        <ul>
+
+          <li class="text-muted menu-title">导航</li>
+
+          <li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 数据指挥中心平台 </span> <span
+              class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+              <li><a href="index.html" target="_blank">数据指挥中心平台</a></li>
+            </ul>
+          </li>
+
+          <li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 大数据分析管理平台 </span> <span
+              class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+              <li><a href="index2.html">自定义查询模板</a></li>
+              <li><a href="index3.html">自定义统计模板</a></li>
+              <li><a href="index4.html">自定义报告模板</a></li>
+            </ul>
+          </li>
+
+          <li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i> <span> 数据应用平台 </span> <span
+              class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+              <li><a href="index5.html">综合数据查询</a></li>
+              <li><a href="enterprise-data-query.html">企业数据查询</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- ========== Left Sidebar end ========== -->
+
+  <!-- ========== main content start ========== -->
+  <div class="content-page">
+
+    <!-- content -->
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+
+    <!-- content -->
+
+    <!-- footer -->
+    <footer class="footer">
+      2015 © Ubold.
+    </footer>
+  </div>
+
+  <!-- ========== main content end ========== -->
+
+
+  <!-- ========== Right sidebar start ========== -->
+  <div class="side-bar right-bar nicescroll">
     ...
+  </div>
+
+  <!-- ========== Right sidebar end ========== -->
+
+</div>
+<!-- scripts -->
+...
 
 </body>
 </html>

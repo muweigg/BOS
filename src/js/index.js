@@ -3,10 +3,10 @@ import * as BMapConfig from './custom_map_config.json';
 import * as Echarts from 'echarts';
 import Vue from 'vue';
 import {
-  timer
+  timer, fromEvent
 } from 'rxjs';
 import {
-  map
+  map, take
 } from 'rxjs/operators';
 
 const initBMap = () => {
@@ -471,6 +471,7 @@ $(() => {
     el: '.index',
     data: {
       systemTime: '',
+      isCustomAreaOpen: ''
     },
     mounted() {
       initBMap();
@@ -499,6 +500,14 @@ $(() => {
         map(count => new Date().format('MM-dd hh:mm:ss'))
       ).subscribe(time => this.systemTime = time);
     },
-    methods: {}
+    methods: {
+      openCustomArea () {
+        this.isCustomAreaOpen = !this.isCustomAreaOpen;
+
+        fromEvent('document', 'click').pipe(
+          take(1)
+        ).subscribe(() => this.isCustomAreaOpen = !this.isCustomAreaOpen);
+      }
+    }
   });
 });

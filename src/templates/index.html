@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
   <title>
-    Command Centre
+    数据指挥中心平台
   </title>
   <script>
     window.resizefunc = [];
@@ -252,6 +252,19 @@
       <img src="../assets/images/temp/news.png" alt="">
       新闻新闻新闻新闻新闻新闻新闻新闻
     </a>
+
+    <!--自定义区域-->
+    <div class="custom-area">
+      自定义区域
+      <i class="fa fa-mouse-pointer"></i>
+      <i class="fa fa-caret-up" @click="openCustomArea"></i>
+
+      <ul v-show="isCustomAreaOpen">
+        <li>自定义模块 <a href="javascript:" class="pull-right">删除</a></li>
+        <li>自定义模块 <a href="javascript:" class="pull-right">删除</a></li>
+        <li>自定义模块 <a href="javascript:" class="pull-right">删除</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="modal fade distribution-box" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
@@ -698,7 +711,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="modal fade goto-system-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
