@@ -492,6 +492,31 @@ $(() => {
       });
 
       $('.distribution-box-3 .nav-tabs').on('shown.bs.tab', (e) => {
+        const index = $(e.target).parent().index();
+        if (index !== 2) return false;
+        const data = [
+          {
+            text: '人口',
+            state: {
+              opened: true,
+              selected: true
+            },
+            children: [
+              '户籍总户数总人口',
+              '户籍人口自然变动',
+              '1%人口抽样调查',
+              '人口普查基本情况',
+              '人口年龄结构和抚养比',
+              '计划生育',
+            ]
+          },
+          '就业',
+          '人民生活',
+          '价格指数',
+          '要素市场',
+        ];
+
+        $('.tree-link').jstree({core: { data: data }});
       });
 
       // $('#jstree').jstree(true)

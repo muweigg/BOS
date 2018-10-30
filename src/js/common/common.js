@@ -16,7 +16,7 @@ import 'script-loader!babel-loader!./third-party/ubold/jquery.slimscroll';
 import 'script-loader!babel-loader!./third-party/ubold/jquery.blockUI';
 import 'script-loader!babel-loader!./third-party/ubold/waves';
 import 'script-loader!babel-loader!./third-party/ubold/jquery.nicescroll';
-import 'script-loader!babel-loader!./third-party/ubold/jstree/jstree';
+import 'script-loader!./third-party/ubold/jstree/jstree.min';
 
 import 'script-loader!babel-loader!./third-party/ubold/datatables/jquery.dataTables.min';
 import 'script-loader!babel-loader!./third-party/ubold/datatables/dataTables.bootstrap4.min';

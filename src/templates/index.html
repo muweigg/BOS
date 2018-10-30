@@ -259,7 +259,7 @@
       <i class="fa fa-mouse-pointer"></i>
       <i class="fa fa-caret-up" @click="openCustomArea"></i>
 
-      <ul v-show="isCustomAreaOpen">
+      <ul v-show="isCustomAreaOpen" v-cloak>
         <li>自定义模块 <a href="javascript:" class="pull-right">删除</a></li>
         <li>自定义模块 <a href="javascript:" class="pull-right">删除</a></li>
         <li>自定义模块 <a href="javascript:" class="pull-right">删除</a></li>
@@ -679,9 +679,9 @@
                         <div class="col-12">
                           <i class="fa fa-bar-chart-o"></i>
                           <span class="pull-right tools">
-                              <a href="javascript:">打印</a>
-                              <a href="javascript:">保存</a>
-                            </span>
+                            <a href="javascript:">打印</a>
+                            <a href="javascript:">保存</a>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -690,15 +690,16 @@
                 <div class="tab-pane fade show" id="d-b3-3">
                   <div class="row">
                     <div class="col-3">
+                      <div class="tree-link">1</div>
                     </div>
                     <div class="col-9">
                       <div class="row">
                         <div class="col-12">
                           <i class="fa fa-bar-chart-o"></i>
                           <span class="pull-right tools">
-                              <a href="javascript:">打印</a>
-                              <a href="javascript:">保存</a>
-                            </span>
+                            <a href="javascript:">打印</a>
+                            <a href="javascript:">保存</a>
+                          </span>
                         </div>
                       </div>
                     </div>
