@@ -21,14 +21,22 @@
   <h4 class="title"><img src="../assets/images/logo.png" alt="">渝北区数据指挥中心平台</h4>
 
   <div class="left-data-area">
-    <div class="l-t-1">
-      <h5>
-        指标轮询
+    <div class="l-t-1" :class="{ 'mw-expand': isLt1Open }" v-cloak>
+      <h5 v-show="!isLt1Open">
+        <strong @click="isLt1Open = true">
+          <i class="fa fa-plus"></i>
+        </strong>
+      </h5>
+      <h5 v-show="isLt1Open">
+        <strong @click="isLt1Open = false">
+          <i class="fa fa-minus"></i>
+          指标轮询
+        </strong>
         <span class="pos-center fz16 c2">财政收入总值（亿元）</span>
         <i class="fa fa-sort-amount-desc fz16 c2"></i>
       </h5>
-      <div class="text-center">（2018-01——2018-08）</div>
-      <div class="list-wrap">
+      <div class="text-center" v-show="isLt1Open">（2018-01——2018-08）</div>
+      <div class="list-wrap" v-show="isLt1Open">
         <ul>
           <li>
             <div class="num">1</div>
@@ -112,50 +120,128 @@
           </li>
         </ul>
       </div>
-    </div>
+      <div class="tools">
+        <!-- 系统时间 -->
+        <div class="system-time">
+          系统时间：{{ systemTime }}
+        </div>
 
-    <div class="l-t-2">
-      <h5>经济指标曲线 <span class="pull-right">亿元</span></h5>
-      <div class="line-chart"></div>
-    </div>
-
-    <div class="tools">
-      <!-- 系统时间 -->
-      <div class="system-time">
-        系统时间：{{ systemTime }}
-      </div>
-
-      <!-- 行业分布 -->
-      <div class="distribution">
-        行业分布
-        <ul>
-          <li data-toggle="modal" data-target=".distribution-box">农、林、牧、渔业</li>
-          <li data-toggle="modal" data-target=".distribution-box">采矿业</li>
-          <li data-toggle="modal" data-target=".distribution-box">制造业</li>
-          <li data-toggle="modal" data-target=".distribution-box">住宿和餐饮业</li>
-          <li data-toggle="modal" data-target=".distribution-box">金融业</li>
-          <li data-toggle="modal" data-target=".distribution-box">房地产业</li>
-          <li data-toggle="modal" data-target=".distribution-box">租赁和商务服务</li>
-          <li>...</li>
-        </ul>
+        <!-- 行业分布 -->
+        <div class="distribution">
+          行业分布
+          <ul>
+            <li data-toggle="modal" data-target=".distribution-box">农、林、牧、渔业</li>
+            <li data-toggle="modal" data-target=".distribution-box">采矿业</li>
+            <li data-toggle="modal" data-target=".distribution-box">制造业</li>
+            <li data-toggle="modal" data-target=".distribution-box">住宿和餐饮业</li>
+            <li data-toggle="modal" data-target=".distribution-box">金融业</li>
+            <li data-toggle="modal" data-target=".distribution-box">房地产业</li>
+            <li data-toggle="modal" data-target=".distribution-box">租赁和商务服务</li>
+            <li>...</li>
+          </ul>
+        </div>
       </div>
     </div>
+
+    <div class="l-t-2" :class="{ 'mw-expand': isLt2Open }" v-cloak>
+      <h5 v-show="!isLt2Open">
+        <strong @click="isLt2Open = true">
+          <i class="fa fa-plus"></i>
+        </strong>
+      </h5>
+      <h5 v-show="isLt2Open">
+        <strong @click="isLt2Open = false">
+          <i class="fa fa-minus"></i>
+          经济指标曲线
+        </strong>
+        <span>亿元</span>
+      </h5>
+      <div class="line-chart" v-show="isLt2Open"></div>
+    </div>
+
   </div>
 
   <div class="right-data-area">
-    <div class="r-t-1">
-      <h5>行业分类：木耳物流园</h5>
-      <div class="pie-chart"></div>
+    <div class="r-t-1" :class="{ 'mw-expand': isRt1Open }" v-cloak>
+      <h5 v-show="!isRt1Open">
+        <strong @click="isRt1Open = true">
+          <i class="fa fa-plus"></i>
+        </strong>
+      </h5>
+      <h5 v-show="isRt1Open">
+        <strong @click="isRt1Open = false">
+          <i class="fa fa-minus"></i>
+          行业分类：木耳物流园
+        </strong>
+      </h5>
+      <div class="pie-chart" v-show="isRt1Open"></div>
+
+      <div class="tools">
+        <!-- 天气 -->
+        <div class="weather">
+          <img src="../assets/images/temp/weather.png" width="30" alt="">
+          多云，17&#8451;/25&#8451;
+          <div class="weather-detail">
+            <div>东南风，4级</div>
+            <div>PM 2.5 22pg/m&sup2;</div>
+            <div>空气质量优</div>
+            <div d-f>
+              <div ta-c fx-auto>
+                <div>明天</div>
+                <div>17&#8451;-25&#8451;</div>
+                <img src="../assets/images/temp/weather.png" width="30" alt="">
+              </div>
+              <div ta-c fx-auto>
+                <div>后天</div>
+                <div>17&#8451;/25&#8451;</div>
+                <img src="../assets/images/temp/weather.png" width="30" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 指标分布 -->
+        <div class="distribution">
+          指标分布
+          <ul>
+            <li data-toggle="modal" data-target=".distribution-box-2">国内生产总值</li>
+            <li data-toggle="modal" data-target=".distribution-box-2">固定投资总额</li>
+            <li data-toggle="modal" data-target=".distribution-box-2">财政收入</li>
+            <li data-toggle="modal" data-target=".distribution-box-2">贷款总额</li>
+            <li>...</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="r-t-2">
-      <h5>指标雷达：木耳物流园VS两江新区</h5>
-      <div class="radar-chart"></div>
+    <div class="r-t-2" :class="{ 'mw-expand': isRt2Open }" v-cloak>
+      <h5 v-show="!isRt2Open">
+        <strong @click="isRt2Open = true">
+          <i class="fa fa-plus"></i>
+        </strong>
+      </h5>
+      <h5 v-show="isRt2Open">
+        <strong @click="isRt2Open = false">
+          <i class="fa fa-minus"></i>
+          指标雷达：木耳物流园VS两江新区
+        </strong>
+      </h5>
+      <div class="radar-chart" v-show="isRt2Open"></div>
     </div>
 
-    <div class="r-t-3">
-      <h5>核心指标增长</h5>
-      <div class="list-wrap">
+    <div class="r-t-3" :class="{ 'mw-expand': isRt3Open }" v-cloak>
+      <h5 v-show="!isRt3Open">
+        <strong @click="isRt3Open = true">
+          <i class="fa fa-plus"></i>
+        </strong>
+      </h5>
+      <h5 v-show="isRt3Open">
+        <strong @click="isRt3Open = false">
+          <i class="fa fa-minus"></i>
+          核心指标增长
+        </strong>
+      </h5>
+      <div class="list-wrap" v-show="isRt3Open">
         <table>
           <thead>
           <th>指标名称</th>
@@ -190,43 +276,6 @@
       <!--进入系统-->
       <div class="goto-system" data-toggle="modal" data-target=".goto-system-box">
         <span>进入<br>系统</span>
-      </div>
-    </div>
-
-    <div class="tools">
-      <!-- 天气 -->
-      <div class="weather">
-        <img src="../assets/images/temp/weather.png" width="30" alt="">
-        多云，17&#8451;/25&#8451;
-        <div class="weather-detail">
-          <div>东南风，4级</div>
-          <div>PM 2.5 22pg/m&sup2;</div>
-          <div>空气质量优</div>
-          <div d-f>
-            <div ta-c fx-auto>
-              <div>明天</div>
-              <div>17&#8451;-25&#8451;</div>
-              <img src="../assets/images/temp/weather.png" width="30" alt="">
-            </div>
-            <div ta-c fx-auto>
-              <div>后天</div>
-              <div>17&#8451;/25&#8451;</div>
-              <img src="../assets/images/temp/weather.png" width="30" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 指标分布 -->
-      <div class="distribution">
-        指标分布
-        <ul>
-          <li data-toggle="modal" data-target=".distribution-box-2">国内生产总值</li>
-          <li data-toggle="modal" data-target=".distribution-box-2">固定投资总额</li>
-          <li data-toggle="modal" data-target=".distribution-box-2">财政收入</li>
-          <li data-toggle="modal" data-target=".distribution-box-2">贷款总额</li>
-          <li>...</li>
-        </ul>
       </div>
     </div>
   </div>

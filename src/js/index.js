@@ -471,6 +471,11 @@ $(() => {
     el: '.index',
     data: {
       systemTime: '',
+      isLt1Open: true,
+      isLt2Open: true,
+      isRt1Open: true,
+      isRt2Open: true,
+      isRt3Open: true,
       isCustomAreaOpen: ''
     },
     mounted() {
