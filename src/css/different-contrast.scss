@@ -1,9 +1,44 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+
+  #wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .content-page {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      .content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 25px;
+        margin-right: -5px;
+      }
+    }
+  }
+}
+
 .different-contrast {
-  overflow-x: auto;
+  flex: 1 1 auto;
+  //overflow: auto;
+  display: flex;
+  flex-flow: column nowrap;
 
   .enterprises {
+    height: 120px;
     display: flex;
     flex-flow: row nowrap;
+    flex: 0 0 120px;
 
     > .enterprise {
       display: flex;
@@ -16,6 +51,12 @@
 
       &:nth-child(odd) {
         background-color: #36404a;
+        border-bottom: 1px solid #303841;
+      }
+
+      &:nth-child(even) {
+        background-color: #303841;
+        border-bottom: 1px solid #36404a;
       }
 
       .ion-close {
@@ -75,6 +116,12 @@
         }
       }
     }
+  }
+
+  .section-wrap {
+    flex: 1 1 auto;
+    overflow: auto;
+    margin-right: -15px;
   }
 
   section {

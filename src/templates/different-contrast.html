@@ -4,7 +4,8 @@
 
 <div class="container-fluid different-contrast">
 
-  <header class="enterprises">
+  <header class="enterprises"
+    :style="{ transform: `translateX(${translateX}px)` }">
     <div class="enterprise">
       <div><h5>企业数据对比详情</h5></div>
       <div class="tools">
@@ -30,11 +31,11 @@
       </div>
       <div class="tools">
         <button class="btn btn-inverse waves-effect waves-light bl"
-          v-if="index !== 0">
+          v-if="index !== 0" @click="transposition(index, 1)">
           <i class="ion-arrow-left-a"></i>
         </button>
         <button class="btn btn-inverse waves-effect waves-light br"
-          v-if="index !== enterprises.length - 1">
+          v-if="index !== enterprises.length - 1" @click="transposition(index, 2)">
           <i class="ion-arrow-right-a"></i>
         </button>
       </div>
@@ -53,19 +54,21 @@
     </div>
   </header>
 
-  <!--<section v-for="(section, index) in sections" :key="section.title">
-    <header @click="toggle">
-      <i class="fa fa-minus"></i>
-      {{ section.title }}
-    </header>
-    <div class="list">
-      <div v-for="row in section.rows">
-        <div>{{ row.name }}</div>
-        <div v-for="item in row.data" :key="item">{{ item }}</div>
-        <div></div>
+  <div class="section-wrap">
+    <section v-for="(section, index) in sections" :key="section.title + index">
+      <header @click="toggle">
+        <i class="fa fa-minus"></i>
+        {{ section.title }}
+      </header>
+      <div class="list">
+        <div v-for="row in section.rows">
+          <div>{{ row.name }}</div>
+          <div v-for="(item, idx) in row.data" :key="item + idx">{{ item }}</div>
+          <div></div>
+        </div>
       </div>
-    </div>
-  </section>-->
+    </section>
+  </div>
 
 </div>
 {% endblock %}

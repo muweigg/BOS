@@ -1,10 +1,13 @@
 import '../css/common/common.scss';
 
 import Vue from 'vue';
+import { fromEvent } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 new Vue({
   el: '.container-fluid.different-contrast',
   data: {
+    translateX: 0,
     enterprises: [
       {id: 1, name: '重庆时代建设（集团）有限公司', dateTime: '2017年8月'},
       {id: 2, name: '重庆时代建设（集团）有限公司', dateTime: '2017年9月'},
@@ -105,6 +108,12 @@ new Vue({
     ]
   },
   mounted() {
+    const header = document.querySelector('.enterprises');
+    fromEvent(document.querySelector('.section-wrap'), 'scroll')
+      .pipe(
+        map(e => e.target.scrollLeft * -1)
+      )
+      .subscribe(left => this.translateX = left);
   },
   methods: {
     toggle(e) {
@@ -120,6 +129,20 @@ new Vue({
       }
 
       list.is(':visible') ? list.hide() : list.show();
+    },
+    transposition(from, dir) {
+      this.positionTransposition(this.enterprises, from, dir);
+      this.sections.forEach(section => section.rows.forEach(row => this.positionTransposition(row.data, from, dir)));
+    },
+    positionTransposition (collection, from, dir) {
+      let item = null;
+      if (dir === 1) {
+        item = collection.splice(from, 1)[0];
+        collection.splice(from - 1, 0, item);
+      } else {
+        item = collection.splice(from, 1)[0];
+        collection.splice(from + 1, 0, item);
+      }
     }
   }
 });
