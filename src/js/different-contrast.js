@@ -135,12 +135,10 @@ new Vue({
       this.sections.forEach(section => section.rows.forEach(row => this.positionTransposition(row.data, from, dir)));
     },
     positionTransposition (collection, from, dir) {
-      let item = null;
+      let item = collection.splice(from, 1)[0];
       if (dir === 1) {
-        item = collection.splice(from, 1)[0];
         collection.splice(from - 1, 0, item);
-      } else {
-        item = collection.splice(from, 1)[0];
+      } else if (dir === 2) {
         collection.splice(from + 1, 0, item);
       }
     }

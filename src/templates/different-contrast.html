@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="enterprise" v-for="(enterprise, index) in enterprises" :key="enterprise.id">
-      <i class="ion-close"></i>
+      <i class="ion-close" @click="transposition(index, 3)"></i>
       <div>
         {{ enterprise.name }}
         <div class="date-time">{{ enterprise.dateTime }}</div>
