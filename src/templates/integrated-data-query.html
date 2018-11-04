@@ -7,21 +7,120 @@
 <div class="container-fluid integrated-data-query">
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a href="#home" data-toggle="tab" aria-expanded="true" class="nav-link active">
+      <a href="#standard-query" data-toggle="tab" aria-expanded="true" class="nav-link active">
         标准查询
       </a>
     </li>
     <li class="nav-item">
-      <a href="#profile" data-toggle="tab" aria-expanded="false" class="nav-link">
+      <a href="#custom-query" data-toggle="tab" aria-expanded="false" class="nav-link">
         自定义查询
       </a>
     </li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane fade show active" id="home">
-      1
+    <div class="tab-pane fade show active" id="standard-query">
+      <div class="filter">
+        <div class="row">
+          <div class="col-12" d-f fxd-r fxw-w>
+
+            <div class="radio">
+              <input type="radio" id="monthly" :value="0" v-model="queryType" checked>
+              <label for="monthly">
+                月度数据
+              </label>
+            </div>
+
+            <div class="radio">
+              <input type="radio" id="quarter" :value="1" v-model="queryType">
+              <label for="quarter">
+                季度数据
+              </label>
+            </div>
+
+            <div class="radio">
+              <input type="radio" id="year" :value="2" v-model="queryType">
+              <label for="year">
+                年度数据
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12" d-f fxd-r fxw-w>
+
+            <div class="radio">
+              <input type="radio" id="all-yubei" :value="0" v-model="areaType" checked>
+              <label for="all-yubei">
+                全渝北区
+              </label>
+            </div>
+
+            <div class="radio">
+              <input type="radio" id="xz" :value="1" v-model="areaType">
+              <label for="xz">
+                按行政区
+              </label>
+            </div>
+
+          </div>
+        </div>
+        <div class="row" v-if="areaType === 1">
+          <div class="col-12" d-f fxd-r fxw-w>
+
+            <div class="checkbox">
+              <input id="checkbox0" type="checkbox">
+              <label for="checkbox0">
+                两江新区
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <input id="checkbox1" type="checkbox">
+              <label for="checkbox1">
+                兴（石船）工业园区
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <input id="checkbox2" type="checkbox">
+              <label for="checkbox2">
+                保税港区
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <input id="checkbox3" type="checkbox">
+              <label for="checkbox3">
+                前沿科技城
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <input id="checkbox4" type="checkbox">
+              <label for="checkbox4">
+                空港工业区
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <input id="checkbox5" type="checkbox">
+              <label for="checkbox5">
+                创新经济走廊
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <input id="checkbox6" type="checkbox">
+              <label for="checkbox6">
+                农业园区
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="tab-pane fade" id="profile">
+    <div class="tab-pane fade" id="custom-query">
       2
     </div>
   </div>
