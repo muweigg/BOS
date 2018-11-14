@@ -5,6 +5,7 @@
 {% block content %}
 
 <div class="container-fluid integrated-data-query">
+
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a href="#standard-query" data-toggle="tab" aria-expanded="true" class="nav-link active">
@@ -17,11 +18,12 @@
       </a>
     </li>
   </ul>
+
   <div class="tab-content">
     <div class="tab-pane fade show active" id="standard-query">
-      <div class="filter">
+      <div class="filter card-box">
         <div class="row">
-          <div class="col-12" d-f fxd-r fxw-w>
+          <div class="col-12" d-f ai-c fxd-r fxw-w>
 
             <div class="radio">
               <input type="radio" id="monthly" :value="0" v-model="queryType" checked>
@@ -46,7 +48,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12" d-f fxd-r fxw-w>
+          <div class="col-12" d-f ai-c fxd-r fxw-w>
 
             <div class="radio">
               <input type="radio" id="all-yubei" :value="0" v-model="areaType" checked>
@@ -65,7 +67,7 @@
           </div>
         </div>
         <div class="row" v-if="areaType === 1">
-          <div class="col-12" d-f fxd-r fxw-w>
+          <div class="col-12" d-f ai-c fxd-r fxw-w>
 
             <div class="checkbox">
               <input id="checkbox0" type="checkbox">
@@ -119,30 +121,100 @@
           </div>
         </div>
       </div>
-      <div d-f fxd-c fxd-r-sm>
+
+      <div class="card-box" d-f fxd-c fxd-r-sm>
         <div class="query-tree-wrap">
           <div class="query-tree"></div>
         </div>
+
         <div fx-auto>
 
           <div class="tools">
-            <form action="" class="form-inline">
-              <div class="form-group">报表类型：</div>
-              <div class="form-group">
-                <select name="" class="form-control">
-                  <option value="0">统计表</option>
-                  <option value="1">柱状图</option>
-                  <option value="2">饼图</option>
-                </select>
-              </div>
+            <form action="">
+              <div class="row">
+                <div class="form-inline col-12 col-sm-6">
+                  <div class="form-group">报表类型：</div>
+                  <div class="form-group">
+                    <select name="" class="form-control">
+                      <option value="0">统计表</option>
+                      <option value="1">柱状图</option>
+                      <option value="2">饼图</option>
+                    </select>
+                  </div>
 
-              <div class="form-group ml-3">时段选择：</div>
-              <div class="form-group">
-                <select name="" class="form-control">
-                  <option value="0">统计表</option>
-                  <option value="1">柱状图</option>
-                  <option value="2">饼图</option>
-                </select>
+                  <div class="form-group ml-3">时段选择：</div>
+                  <div class="form-group">
+
+
+                    <div class="btn-group">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        表格处理
+                      </button>
+                      <div class="dropdown-menu">
+                        <a href="javascript:" class="dropdown-item">2018年2季度</a>
+                        <a href="javascript:" class="dropdown-item">2018年1季度</a>
+                        <a href="javascript:" class="dropdown-item">2017年4季度</a>
+                        <a href="javascript:" class="dropdown-item">2017年3季度</a>
+                        <a href="javascript:" class="dropdown-item">2017年2季度</a>
+                        <div class="dropdown-item">
+                          <input type="text" class="form-control" @focus="toggleShowTips" @blur="toggleShowTips">
+                          <button class="btn btn-secondary">确认</button>
+                          <div class="card-box tips" v-if="isShowTips">
+                            <p><span>例：输入格式如下</span></p><p><span>月：201801，201805</span></p><p><span>季：2012A，2012B</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; 2012C，2012D</span></p><p><span>年：2012，2013</span></p><p><span>其他：2013-，last10</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="form-inline col-12 col-sm-6" d-f jc-fe>
+
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      数据处理
+                    </button>
+                    <ul class="dropdown-menu multi-level dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
+                      <li><a href="#" class="dropdown-item">新增指标</a></li>
+                      <li><a href="#" class="dropdown-item">筛选</a></li>
+                      <li class="dropdown-divider"></li>
+                      <li class="dropdown-submenu pull-left">
+                        <a  class="dropdown-item" tabindex="-1" href="#">统计</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-submenu pull-left">
+                            <a class="dropdown-item" href="#">对行运算</a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" class="dropdown-item">SUM求和</a></li>
+                              <li><a href="#" class="dropdown-item">x平均值</a></li>
+                              <li><a href="#" class="dropdown-item">Co计数</a></li>
+                              <li><a href="#" class="dropdown-item">MAX最大值</a></li>
+                              <li><a href="#" class="dropdown-item">MIN最小值</a></li>
+                            </ul>
+                          </li>
+                          <li class="dropdown-divider"></li>
+                          <li><a tabindex="-1" href="#" class="dropdown-item">对列运算</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li><a href="#" class="dropdown-item">恢复</a></li>
+                      <li><a href="#" class="dropdown-item">去除空行空列</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="btn-group ml-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      表格处理
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="javascript:" class="dropdown-item">转置</a>
+                      <a href="javascript:" class="dropdown-item">恢复默认</a>
+                    </div>
+                  </div>
+
+                </div>
+
               </div>
             </form>
           </div>
@@ -248,7 +320,6 @@
       </div>
     </div>
   </div>
-
 
 </div>
 {% endblock %}

@@ -7,6 +7,7 @@ new Vue({
   data: {
     queryType: 0,
     areaType: 0,
+    isShowTips: false,
   },
   mounted () {
     this.initTree();
@@ -51,6 +52,14 @@ new Vue({
 
       $('.query-tree').jstree({core: { data: queryData }});
 
+      $('.submenu').click((e) => {
+        e.stopPropagation();
+        e.preventDefault();
+      });
+    },
+
+    toggleShowTips () {
+      this.isShowTips = !this.isShowTips;
     }
   },
 });
