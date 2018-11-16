@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="container-fluid integrated-data-query">
+<div class="container-fluid custom-report-template">
 
   <div class="row m-b-15">
     <div class="col-12">
@@ -12,27 +12,144 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-12">
+      <div class="filter card-box">
+        <form action="" class="form">
+          <div class="form-inline">
+
+            <div class="form-group">
+              <label for="reportName">报告名称：</label>
+              <input type="text" id="reportName" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="reportTemplate">报告模板：</label>
+              <select name="" id="reportTemplate" class="form-control">
+                <option value="0">全部</option>
+                <option value="1">固定投资增长型</option>
+                <option value="2">房地产开发和销售模型</option>
+                <option value="3">社区消费品种额增长模型</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="reportStatus">报告模板：</label>
+              <select name="" id="reportStatus" class="form-control">
+                <option value="0">全部</option>
+                <option value="1">草稿</option>
+                <option value="2">已生成</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="reportTime">生成时间：</label>
+              <input type="date" id="reportTime" class="form-control">
+              &nbsp;&nbsp;-&nbsp;&nbsp;
+              <input type="date" id="reportTime2" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary"><i class="md-search"></i>查询</button>
+              <button class="btn btn-primary"><i class="md-refresh"></i>重置</button>
+              <button class="btn btn-primary"data-toggle="modal" data-target=".create-report" @click.prevent=""><i class="md-add"></i>创建</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <table id="responsive-datatable" class="table table-bordered table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th data-priority="1">序号</th>
+            <th data-priority="2">报告名称</th>
+            <th data-priority="3">报告模板</th>
+            <th data-priority="2">状态</th>
+            <th data-priority="4">生成时间</th>
+            <th data-priority="3">创建者</th>
+            <th data-priority="1">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="i in 35">
+            <td><span class="co-name">{{ i }}</span></td>
+            <td>渝北区固定投资增长报告 {{ i }}</td>
+            <td>固定投资增长模型</td>
+            <td>已生成</td>
+            <td>2018-09-12 14:22</td>
+            <td>张三</td>
+            <td class="text-center">
+              <a href="javascript:">查看</a>
+              <a href="javascript:">编辑</a>
+              <a href="javascript:">下载</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <div class="modal fade create-report" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel3"
        aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myLargeModalLabel3">创建报告</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         </div>
         <div class="modal-body">
-          <div class="row">
-            <div class="col-12">
-            </div>s
-          </div>
-          <div class="row m-t-10 m-b-10">
-            <div class="col-12">
+          <form action="">
+            <div class="row">
+              <div class="col-12">
+                <h5>选择要创建的模板类型：</h5>
+              </div>
             </div>
-          </div>
+            <div class="row m-t-10 m-b-10">
+              <div class="col-12">
+
+                <div class="form-group form-inline">
+                  <label>我的模板：</label>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      选择加载模板
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <ul>
+                        <li class="dropdown-item">自定义模板1 <a href="javascript:">删除</a></li>
+                        <li class="dropdown-item">自定义模板2 <a href="javascript:">删除</a></li>
+                        <li class="dropdown-item">自定义模板3 <a href="javascript:">删除</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group form-inline">
+                  <label>模板副本：</label>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      选择加载模板
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <ul>
+                        <li class="dropdown-item">模板副本1 <a href="javascript:">删除</a></li>
+                        <li class="dropdown-item">模板副本2 <a href="javascript:">删除</a></li>
+                        <li class="dropdown-item">模板副本3 <a href="javascript:">删除</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button class="btn btn-primary">确定</button>
-          <button class="btn btn-secondary">关闭</button>
+          <button class="btn btn-secondary" data-dismiss="modal">关闭</button>
         </div>
       </div>
     </div>

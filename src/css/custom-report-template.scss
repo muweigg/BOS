@@ -1,0 +1,53 @@
+.custom-report-template {
+
+  .filter {
+
+    .form-group {
+      margin: 5px 0 5px 10px;
+    }
+
+    input {
+      max-width: 120px;
+
+      &[type=date] {
+        max-width: 160px;
+      }
+    }
+
+    select {
+      max-width: 150px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      margin: 5px 10px 5px 0;
+
+      &:nth-last-of-type(1) {
+        margin-left: 0;
+      }
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+
+      li {
+        position: relative;
+
+        a {
+          position: absolute;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
