@@ -14,6 +14,11 @@ new Vue({
         infoEmpty: "当前没有任何数据",
       },
     });
+  },
+  methods: {
+    gotoCreateTemplate () {
+      window.location.assign('create-template.html');
+    }
   }
 });
 
